@@ -1,0 +1,252 @@
+import { FC } from 'react'
+import cn from 'classnames'
+import { RarityTag } from 'shared/types'
+import s from './mintingFileChooserBackground.module.scss'
+
+interface MintingFileChooserBackgroundProps {
+  rarity: RarityTag | null
+  rarityShadowColor: string
+}
+
+export const MintingFileChooserBackground: FC<
+  MintingFileChooserBackgroundProps
+> = ({ rarity, rarityShadowColor }) => {
+  return (
+    <svg
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      className={cn(s.bg, rarity && s[rarity])}
+      width='350'
+      height='507'
+      viewBox='0 0 350 507'
+    >
+      <mask id='path-1-inside-1_740_8842' fill='white'>
+        <path
+          fill-rule='evenodd'
+          clip-rule='evenodd'
+          d='M33.2692 16C23.1794 16 15 24.1794 15 34.2692V74V472.731C15 482.821 23.1794 491 33.2692 491H72C72 486.029 76.0294 482 81 482H268C272.971 482 277 486.029 277 491H316.731C326.821 491 335 482.821 335 472.731V438C330.029 438 326 433.971 326 429V83C326 78.0294 330.029 74 335 74V34.2692C335 24.1794 326.821 16 316.731 16H72H33.2692ZM72 16C72 20.9706 76.0294 25 81 25L268 25C272.971 25 277 20.9706 277 16L72 16ZM15 74L15 438C19.9706 438 24 433.971 24 429L24 83C24 78.0294 19.9706 74 15 74Z'
+        />
+      </mask>
+      <g filter='url(#filter0_i_740_8842)'>
+        <path
+          fill-rule='evenodd'
+          clip-rule='evenodd'
+          d='M33.2692 16C23.1794 16 15 24.1794 15 34.2692V74V472.731C15 482.821 23.1794 491 33.2692 491H72C72 486.029 76.0294 482 81 482H268C272.971 482 277 486.029 277 491H316.731C326.821 491 335 482.821 335 472.731V438C330.029 438 326 433.971 326 429V83C326 78.0294 330.029 74 335 74V34.2692C335 24.1794 326.821 16 316.731 16H72H33.2692ZM72 16C72 20.9706 76.0294 25 81 25L268 25C272.971 25 277 20.9706 277 16L72 16ZM15 74L15 438C19.9706 438 24 433.971 24 429L24 83C24 78.0294 19.9706 74 15 74Z'
+          fill='white'
+          fill-opacity='0.1'
+        />
+      </g>
+      <path
+        d='M15 74H14H15ZM72 491V492H73V491H72ZM277 491H276V492H277V491ZM335 438H336V437H335V438ZM335 74V75H336V74H335ZM81 25V24V25ZM268 25V24V25ZM277 16H278V15L277 15V16ZM15 438H14V439H15V438ZM24 429H25H24ZM24 83H23H24ZM16 34.2692C16 24.7317 23.7317 17 33.2692 17V15C22.6271 15 14 23.6271 14 34.2692H16ZM16 74V34.2692H14V74H16ZM16 472.731V74H14V472.731H16ZM33.2692 490C23.7317 490 16 482.268 16 472.731H14C14 483.373 22.6271 492 33.2692 492V490ZM72 490H33.2692V492H72V490ZM81 481C75.4772 481 71 485.477 71 491H73C73 486.582 76.5817 483 81 483V481ZM268 481H81V483H268V481ZM278 491C278 485.477 273.523 481 268 481V483C272.418 483 276 486.582 276 491H278ZM316.731 490H277V492H316.731V490ZM334 472.731C334 482.268 326.268 490 316.731 490V492C327.373 492 336 483.373 336 472.731H334ZM334 438V472.731H336V438H334ZM335 437C330.582 437 327 433.418 327 429H325C325 434.523 329.477 439 335 439V437ZM327 429V83H325V429H327ZM327 83C327 78.5817 330.582 75 335 75V73C329.477 73 325 77.4772 325 83H327ZM334 34.2692V74H336V34.2692H334ZM316.731 17C326.268 17 334 24.7317 334 34.2692H336C336 23.6271 327.373 15 316.731 15V17ZM72 17H316.731V15H72V17ZM33.2692 17H72V15H33.2692V17ZM71 16C71 21.5228 75.4771 26 81 26V24C76.5817 24 73 20.4183 73 16H71ZM81 26L268 26V24L81 24V26ZM268 26C273.523 26 278 21.5229 278 16H276C276 20.4183 272.418 24 268 24V26ZM277 15L72 15V17L277 17V15ZM16 438L16 74H14L14 438H16ZM23 429C23 433.418 19.4183 437 15 437V439C20.5229 439 25 434.523 25 429H23ZM23 83L23 429H25L25 83H23ZM15 75C19.4183 75 23 78.5817 23 83H25C25 77.4772 20.5228 73 15 73V75Z'
+        fill='white'
+        fill-opacity='0.15'
+        mask='url(#path-1-inside-1_740_8842)'
+      />
+      <g
+        className={s.colorBorder}
+        opacity='0.1'
+        filter='url(#filter1_d_740_8842)'
+      >
+        <path
+          d='M272 16C272 18.7614 269.761 21 267 21L82 21C79.2386 21 77 18.7614 77 16L272 16Z'
+          fill='white'
+        />
+      </g>
+      <g
+        className={s.colorBorder}
+        opacity='0.1'
+        filter='url(#filter2_d_740_8842)'
+      >
+        <path
+          d='M15 78C17.7614 78 20 80.2386 20 83L20 428C20 430.761 17.7614 433 15 433L15 78Z'
+          fill='white'
+        />
+      </g>
+      <g
+        className={s.colorBorder}
+        opacity='0.1'
+        filter='url(#filter4_d_740_8842)'
+      >
+        <path
+          d='M272 491C272 488.239 269.761 486 267 486L82 486C79.2386 486 77 488.239 77 491L272 491Z'
+          fill='white'
+        />
+      </g>
+      <g
+        className={s.colorBorder}
+        opacity='0.1'
+        filter='url(#filter3_d_740_8842)'
+      >
+        <path
+          d='M335 78C332.239 78 330 80.2386 330 83L330 428C330 430.761 332.239 433 335 433L335 78Z'
+          fill='white'
+        />
+      </g>
+      <defs>
+        <filter
+          id='filter0_i_740_8842'
+          x='15'
+          y='16'
+          width='320'
+          height='477'
+          filterUnits='userSpaceOnUse'
+          color-interpolation-filters='sRGB'
+        >
+          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feBlend
+            mode='normal'
+            in='SourceGraphic'
+            in2='BackgroundImageFix'
+            result='shape'
+          />
+          <feColorMatrix
+            in='SourceAlpha'
+            type='matrix'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+            result='hardAlpha'
+          />
+          <feOffset dy='2' />
+          <feGaussianBlur stdDeviation='4' />
+          <feComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1' />
+          <feColorMatrix
+            type='matrix'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0'
+          />
+          <feBlend
+            mode='normal'
+            in2='shape'
+            result='effect1_innerShadow_740_8842'
+          />
+        </filter>
+        <filter
+          id='filter1_d_740_8842'
+          x='61'
+          y='0'
+          width='227'
+          height='37'
+          filterUnits='userSpaceOnUse'
+          color-interpolation-filters='sRGB'
+        >
+          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feColorMatrix
+            in='SourceAlpha'
+            type='matrix'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+            result='hardAlpha'
+          />
+          <feOffset />
+          <feGaussianBlur stdDeviation='8' />
+          <feComposite in2='hardAlpha' operator='out' />
+          <feColorMatrix type='matrix' values={rarityShadowColor} />
+          <feBlend
+            mode='normal'
+            in2='BackgroundImageFix'
+            result='effect1_dropShadow_740_8842'
+          />
+          <feBlend
+            mode='normal'
+            in='SourceGraphic'
+            in2='effect1_dropShadow_740_8842'
+            result='shape'
+          />
+        </filter>
+        <filter
+          id='filter2_d_740_8842'
+          x='0.384615'
+          y='63.3846'
+          width='34.2308'
+          height='384.231'
+          filterUnits='userSpaceOnUse'
+          color-interpolation-filters='sRGB'
+        >
+          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feColorMatrix
+            in='SourceAlpha'
+            type='matrix'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+            result='hardAlpha'
+          />
+          <feOffset />
+          <feGaussianBlur stdDeviation='7.30769' />
+          <feComposite in2='hardAlpha' operator='out' />
+          <feColorMatrix type='matrix' values={rarityShadowColor} />
+          <feBlend
+            mode='normal'
+            in2='BackgroundImageFix'
+            result='effect1_dropShadow_740_8842'
+          />
+          <feBlend
+            mode='normal'
+            in='SourceGraphic'
+            in2='effect1_dropShadow_740_8842'
+            result='shape'
+          />
+        </filter>
+        <filter
+          id='filter3_d_740_8842'
+          x='315.385'
+          y='63.3846'
+          width='34.2308'
+          height='384.231'
+          filterUnits='userSpaceOnUse'
+          color-interpolation-filters='sRGB'
+        >
+          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feColorMatrix
+            in='SourceAlpha'
+            type='matrix'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+            result='hardAlpha'
+          />
+          <feOffset />
+          <feGaussianBlur stdDeviation='7.30769' />
+          <feComposite in2='hardAlpha' operator='out' />
+          <feColorMatrix type='matrix' values={rarityShadowColor} />
+          <feBlend
+            mode='normal'
+            in2='BackgroundImageFix'
+            result='effect1_dropShadow_740_8842'
+          />
+          <feBlend
+            mode='normal'
+            in='SourceGraphic'
+            in2='effect1_dropShadow_740_8842'
+            result='shape'
+          />
+        </filter>
+        <filter
+          id='filter4_d_740_8842'
+          x='61'
+          y='470'
+          width='227'
+          height='37'
+          filterUnits='userSpaceOnUse'
+          color-interpolation-filters='sRGB'
+        >
+          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feColorMatrix
+            in='SourceAlpha'
+            type='matrix'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+            result='hardAlpha'
+          />
+          <feOffset />
+          <feGaussianBlur stdDeviation='8' />
+          <feComposite in2='hardAlpha' operator='out' />
+          <feColorMatrix type='matrix' values={rarityShadowColor} />
+          <feBlend
+            mode='normal'
+            in2='BackgroundImageFix'
+            result='effect1_dropShadow_740_8842'
+          />
+          <feBlend
+            mode='normal'
+            in='SourceGraphic'
+            in2='effect1_dropShadow_740_8842'
+            result='shape'
+          />
+        </filter>
+      </defs>
+    </svg>
+  )
+}

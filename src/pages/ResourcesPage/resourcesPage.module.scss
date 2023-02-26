@@ -1,0 +1,31 @@
+@use 'styles' as *;
+
+.mainWrapper {
+    padding: 64px 10px 50px;
+    position: relative;
+}
+
+.resourcesTable {
+    margin-top: 72px;
+}
+
+.topImage,
+.bottomImage {
+    position: absolute;
+}
+
+.topImage {
+    top: 230px;
+    right: -100px;
+    @media (max-width: 1200px) {
+        display: none;
+    }
+}
+
+.bottomImage {
+    bottom: 120px;
+    left: -200px;
+    @media (max-width: 1200px) {
+        display: none;
+    }
+}

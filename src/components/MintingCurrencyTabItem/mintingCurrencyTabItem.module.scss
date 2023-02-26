@@ -1,0 +1,173 @@
+@use 'styles' as *;
+
+.wrapper {
+  width: 430px;
+  height: 90px;
+  background-color: $color-white-005;
+  border: 1px solid $color-white-01;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $color-white;
+  @include regularText;
+  line-height: 1;
+  padding-top: 10px;
+  text-align: left;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 12px;
+
+  @media (max-width: 984px) {
+    width: 100%;
+    min-width: 256px;
+    height: 62px;
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 57px;
+    padding-bottom: 9px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 66%;
+    background-color: rgba(255, 255, 255, 0.2);
+    top: 16px;
+    right: 176px;
+
+    @media (max-width: 984px) {
+      display: none;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: 2px;
+    left: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (max-width: 984px) {
+      transform: scale(0.6);
+
+      top: -14px;
+      left: -14px;
+    }
+  }
+
+  &.firstTab {
+    order: -1;
+  }
+
+  &.active {
+    & .leftContent {
+      font-size: 24px;
+
+      @media (max-width: 984px) {
+        font-size: 16px;
+      }
+    }
+
+    &.usdt {
+      background-color: $color-green-mint-02;
+      border: 3px solid $color-green-mint-05;
+    }
+    &.water {
+      background-color: $color-blue-2260-02;
+      border: 3px solid $color-blue-2260-05;
+    }
+    &.energy {
+      background-color: $color-yellow-e5-02;
+      border: 3px solid $color-yellow-e5-05;
+    }
+    &.oxygen {
+      background-color: $color-blue-frosty-02;
+      border: 3px solid $color-blue-frosty-05;
+    }
+  }
+
+  &.usdt::before {
+    background-image: url('../../../public/assets/img/usdt.svg');
+  }
+  &.water::before {
+    background-image: url('../../../public/assets/icons/recources/water.svg');
+  }
+  &.energy::before {
+    background-image: url('../../../public/assets/icons/recources/energy.svg');
+    top: -1px;
+    left: 12px;
+
+    @media (max-width: 984px) {
+      top: -14px;
+      left: -12px;
+    }
+  }
+  &.oxygen::before {
+    background-image: url('../../../public/assets/icons/recources/oxygen.svg');
+    top: 5px;
+    left: 9px;
+
+    @media (max-width: 984px) {
+      top: -14px;
+      left: -14px;
+    }
+  }
+
+  & .leftContent {
+    font-size: 22px;
+    padding-left: 85px;
+
+    @media (max-width: 984px) {
+      padding-left: 0;
+      padding-bottom: 5px;
+      font-size: 16px;
+    }
+
+    & .сurrencyAbbreviation {
+      text-transform: uppercase;
+    }
+  }
+
+  &.usdt .rightContent {
+    padding-right: 12px;
+  }
+
+  & .rightContent {
+    font-size: 20px;
+    padding-right: 25px;
+
+    @media (max-width: 984px) {
+      padding-right: 0;
+      font-size: 14px;
+    }
+
+    & .сurrencyAbbreviation {
+      text-transform: uppercase;
+    }
+  }
+
+  &.usdt .сurrencyAbbreviation,
+  &.usdt .avalible {
+    color: $color-green-mint;
+  }
+  &.water .сurrencyAbbreviation,
+  &.water .avalible {
+    color: $color-blue-2260;
+  }
+  &.energy .сurrencyAbbreviation,
+  &.energy .avalible {
+    color: $color-yellow-e5;
+  }
+  &.oxygen .сurrencyAbbreviation,
+  &.oxygen .avalible {
+    color: $color-blue-frosty;
+  }
+}

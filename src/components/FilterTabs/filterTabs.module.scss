@@ -1,0 +1,25 @@
+@use 'styles' as *;
+
+.filterTabs {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (min-width:769px) {
+        >* {
+            margin: 5px;
+            width: 24%;
+        }
+    }
+
+
+
+    @media (max-width:768px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 15px;
+        gap: 10px;
+    }
+}

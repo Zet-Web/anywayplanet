@@ -1,0 +1,293 @@
+@use 'styles' as *;
+
+.withdrawFundsModalBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+.container {
+  position: relative;
+  max-width: 954px;
+  height: 935px;
+  width: 100%;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $color-white-007;
+  padding: 72px 121px 64px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  @include mobile-tablet {
+    height: 100%;
+    padding: 36px 16px 24px;
+    border-radius: 12px;
+    background-color: $color-white-01;
+  }
+}
+
+.topLine,
+.bottomLine {
+  position: absolute;
+  content: '';
+  left: 50%;
+  transform: translateX(-50%);
+  width: 642px;
+  height: 12px;
+  display: flex;
+  justify-content: center;
+  z-index: 11;
+
+  @include mobile-tablet {
+    width: 60%;
+  }
+}
+
+.topLine {
+  top: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+
+  > .topLineInner {
+    height: 6px;
+    width: calc(100% - 10px);
+    background-color: $color-green-meadow;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0px 0px 16px $color-green-meadow;
+  }
+}
+
+.bottomLine {
+  bottom: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+
+  > .bottomLineInner {
+    height: 6px;
+    width: calc(100% - 10px);
+    background-color: $color-green-meadow;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    box-shadow: 0px 0px 16px $color-green-meadow;
+    margin-top: auto;
+  }
+}
+
+.leftLine,
+.rightLine {
+  position: absolute;
+  width: 13px;
+  height: 350px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 11;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.leftLine {
+  left: -1px;
+  border-radius: 0px 50px 50px 0px;
+  display: flex;
+  align-items: center;
+
+  > .leftLineInner {
+    width: 7px;
+    height: 340px;
+    z-index: 1;
+    /* USDT */
+
+    background: $color-green-meadow;
+    opacity: 0.3;
+    box-shadow: 0px 0px 16px $color-green-08;
+    border-radius: 0px 50px 50px 0px;
+  }
+
+  @include mobile-tablet {
+    display: none;
+  }
+}
+
+.rightLine {
+  right: -1px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  > .rightLineInner {
+    width: 7px;
+    height: 340px;
+    z-index: 1;
+    /* USDT */
+
+    background: $color-green-meadow;
+    opacity: 0.3;
+    box-shadow: 0px 0px 16px $color-green-08;
+    border-radius: 50px 0px 0px 50px;
+  }
+
+  @include mobile-tablet {
+    display: none;
+  }
+}
+
+.title {
+  font-family: $neuePlain;
+  font-weight: $fw-extrabold;
+  font-size: 32px;
+  line-height: 33px;
+  color: $color-white;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+
+  @include mobile-tablet {
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+  }
+}
+.withdrawFundsForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.valuesContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include mobile-tablet {
+    gap: 16px;
+  }
+}
+.inputLabel {
+  min-width: 233px;
+  color: $color-green-meadow;
+
+  @include mobile-tablet {
+    min-width: unset;
+  }
+}
+.amount {
+  margin-top: 20px;
+  font-family: $neuePlain;
+  font-weight: $fw-regular;
+  font-size: 18px;
+  line-height: 16px;
+  color: $color-white-06;
+
+  @include mobile-tablet {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 11px;
+  }
+}
+.content {
+  margin-top: 50px;
+
+  @include mobile-tablet {
+    margin-top: 30px;
+  }
+}
+.contentTitle {
+  font-family: $neuePlain;
+  font-weight: $fw-regular;
+  font-size: 24px;
+  line-height: 29px;
+
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $color-white;
+  padding-bottom: 24px;
+  border-bottom: 1px solid $color-border-gray;
+
+  @include mobile-tablet {
+    padding-bottom: 10px;
+    border-color: $color-mobile-border-gray;
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+.commission {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid $color-border-gray;
+
+  @include mobile-tablet {
+    padding: 9px 0;
+    border-color: $color-mobile-border-gray;
+  }
+}
+.commission .placeholder {
+  font-family: $neuePlain;
+  font-weight: $fw-regular;
+  font-size: 18px;
+  line-height: 16px;
+  color: $color-white-06;
+
+  @include mobile-tablet {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+.commission .value {
+  font-family: $neuePlain;
+  font-weight: $fw-extrabold;
+  font-size: 18px;
+  line-height: 16px;
+  color: $color-white;
+
+  @include mobile-tablet {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 20px;
+  font-family: $neuePlain;
+  font-weight: $fw-extrabold;
+  font-size: 20px;
+  line-height: 17px;
+  color: $color-green-meadow;
+
+  @include mobile-tablet {
+    padding-top: 9px;
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+.withdrawButton {
+  margin-top: 56px;
+  align-self: center;
+  font-family: $neuePlain;
+  font-weight: $fw-regular;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $color-white;
+
+  @include mobile-tablet {
+    margin-top: 30px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+}

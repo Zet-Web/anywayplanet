@@ -1,0 +1,99 @@
+@use 'styles' as *;
+
+.default {
+  width: 240px;
+  height: 262px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 140px;
+    height: fit-content;
+  }
+}
+
+.title {
+  font-family: $neuePlain;
+  font-style: normal;
+  font-weight: $fw-bold;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $color-green-lime;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 7px;
+  margin-top: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
+}
+
+.text {
+  font-family: $neuePlain;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color-white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 130%;
+  }
+}
+
+.time {
+  width: 185px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../../../public/assets/img/itemSliderImg.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 38px 0;
+  color: $color-white;
+  font-size: 30px;
+  line-height: 37px;
+  font-weight: 800;
+  font-family: 'PP Neue Machina Plain';
+  letter-spacing: 2px;
+
+  @media (max-width: 768px) {
+    width: 120px;
+    font-size: 21.3px;
+    line-height: 26.7px;
+  }
+
+  .year {
+    font-size: 24px;
+    line-height: 30px;
+
+    @media (max-width: 768px) {
+      font-size: 17px;
+      line-height: 21px;
+    }
+  }
+
+  .count {
+    font-size: 14px;
+    line-height: 17px;
+    color: $color-green-lime;
+    font-weight: 200;
+
+    @media (max-width: 768px) {
+      font-size: 10px;
+      line-height: 12.4px;
+    }
+  }
+}

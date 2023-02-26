@@ -1,0 +1,273 @@
+@use 'styles' as *;
+
+.tokenCard {
+  width: 348px;
+  height: 390px;
+  position: relative;
+  padding: 29px 24px 24px 24px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(40px);
+  border-radius: 18px;
+  background: $color-white-01;
+  border: 1px solid $color-white-15;
+
+  @media (max-width: 1453px) {
+    &[data-grid-number='0'] {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+    &[data-grid-number='1'] {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+    &[data-grid-number='2'] {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+    &[data-grid-number='3'] {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+  }
+
+  @include mobile-tablet {
+    width: 288px;
+    border-radius: 12px;
+    padding: 17px 16px 15px;
+    height: fit-content;
+  }
+
+  & .title {
+    @include regularText;
+    color: $color-white;
+    padding-left: 62px;
+    position: relative;
+
+    @include mobile-tablet {
+      font-size: 22px;
+      padding-left: 51px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 94px;
+      height: 94px;
+      top: -29px;
+      left: -22px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+
+      @include mobile-tablet {
+        transform: scale(0.8);
+        top: -28px;
+        left: -28px;
+      }
+    }
+
+    &.oxygen::before {
+      background-image: url('../../../public/assets/icons/recources/oxygen.svg');
+    }
+    &.water::before {
+      background-image: url('../../../public/assets/icons/recources/water.svg');
+    }
+    &.energy::before {
+      background-image: url('../../../public/assets/icons/recources/energy.svg');
+    }
+    &.minerals::before {
+      background-image: url('../../../public/assets/icons/recources/minerals.svg');
+    }
+  }
+
+  & .balanceWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: last baseline;
+    padding-top: 25px;
+
+    @include mobile-tablet {
+      padding-top: 16px;
+    }
+
+    & .balanceTitle {
+      color: $color-white;
+      font-weight: $fw-extrabold;
+      font-size: 15px;
+    }
+
+    & .balanceAmount {
+      font-weight: $fw-extrabold;
+      font-size: 28px;
+      padding-top: 10px;
+      margin-right: -4px;
+
+      @include mobile-tablet {
+        font-size: 26px;
+        padding-top: 5px;
+      }
+
+      & .unit {
+        font-size: 20px;
+      }
+    }
+  }
+
+  & .tokenButtons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 17px;
+
+    @include mobile-tablet {
+      padding-top: 14px;
+    }
+
+    & .btn {
+      width: 144px;
+      height: 38px;
+      color: $color-white;
+      @include regularCardText;
+      font-size: 16px;
+      border: 2px solid $color-white-18;
+      border-radius: 8px;
+      background-color: transparent;
+      padding-left: 31px;
+      padding-top: 6px;
+      position: relative;
+      cursor: pointer;
+
+      @include mobile-tablet {
+        width: 124px;
+        padding-left: 29px;
+        padding-top: 3px;
+      }
+
+      & .icon {
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+      }
+
+      &.transferBtn .icon {
+        top: 8px;
+        left: 26px;
+
+        @include mobile-tablet {
+          left: 14px;
+        }
+
+        &.oxygen path {
+          fill: $color-blue-frosty;
+        }
+
+        &.water path {
+          fill: $color-blue-2260;
+        }
+
+        &.energy path {
+          fill: $color-yellow-e5;
+        }
+
+        &.minerals path {
+          fill: $color-aniline-purple;
+        }
+      }
+
+      &.swapBtn .icon {
+        top: 7px;
+        left: 40px;
+
+        @include mobile-tablet {
+          left: 28px;
+        }
+
+        &.oxygen path {
+          stroke: $color-blue-frosty;
+        }
+
+        &.water path {
+          stroke: $color-blue-2260;
+        }
+
+        &.energy path {
+          stroke: $color-yellow-e5;
+        }
+
+        &.minerals path {
+          stroke: $color-aniline-purple;
+        }
+      }
+    }
+  }
+
+  & .colectionCounters {
+    width: 100%;
+    padding-top: 28px;
+
+    @include mobile-tablet {
+      padding-top: 20px;
+    }
+
+    & .counter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $color-white;
+      font-size: 14px;
+      opacity: 0.6;
+
+      @include mobile-tablet {
+        font-size: 13px;
+      }
+
+      &:not(:last-child) {
+        padding-bottom: 12px;
+        border-bottom: 1px solid #323a46;
+
+        @include mobile-tablet {
+          padding-bottom: 9px;
+        }
+      }
+
+      &:not(:first-child) {
+        padding-top: 13px;
+
+        @include mobile-tablet {
+          padding-top: 10px;
+        }
+      }
+
+      & .count {
+        font-size: 19px;
+        @include mobile-tablet {
+          font-size: 13px;
+        }
+      }
+      & .unit {
+        @include mobile-tablet {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+.oxygen {
+  color: $color-blue-frosty;
+  margin-right: -5px;
+}
+.water {
+  color: $color-blue-2260;
+  margin-right: -5px;
+}
+
+.energy {
+  color: $color-yellow-e5;
+  margin-right: -5px;
+}
+
+.minerals {
+  color: $color-aniline-purple;
+  margin-right: -5px;
+}

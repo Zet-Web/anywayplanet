@@ -1,0 +1,83 @@
+@use 'styles' as *;
+
+.wrapper {
+  border-radius: 18px;
+  max-width: 1440px;
+  height: 72px;
+  background-color: $color-white-007;
+  backdrop-filter: blur(40px);
+  border: 1px solid $color-white-01;
+  border-top: none;
+  position: relative;
+
+  & .tabsList {
+    margin: 0;
+    padding: 0 60px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile-big-tablet {
+      padding: 0 16px;
+    }
+  }
+
+  @include mobile-tablet {
+    border-radius: 0;
+    height: 58px;
+    overflow-y: hidden;
+
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+      display: none; /* for Chrome, Safari, and Opera */
+    }
+  }
+}
+
+.disableTab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  text-transform: uppercase;
+  background-color: $color-green-label;
+  width: 95px;
+  height: 17px;
+  border-radius: 5px;
+  border: 1px solid $color-white;
+  font-size: 9px;
+  font-family: $neuePlain;
+  color: $color-white;
+  font-weight: $fw-regular;
+  top: -7px;
+
+  @include mobile-tablet {
+    display: none;
+  }
+}
+
+.disableTabLandPlot {
+  composes: disableTab;
+  right: 20%;
+}
+
+.disableTabSkins {
+  composes: disableTab;
+  right: 6%;
+
+  @include mobile-big-tablet {
+    right: 3%;
+  }
+}
+
+.disableItem {
+  cursor: initial;
+  opacity: 0.5;
+  background: none;
+}

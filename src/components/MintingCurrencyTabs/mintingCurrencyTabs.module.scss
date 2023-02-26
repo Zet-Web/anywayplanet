@@ -1,0 +1,89 @@
+@use 'styles' as *;
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 34px;
+
+  @media (max-width: 536px) {
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
+  & .title {
+    @include headMenuText;
+    color: $color-white-06;
+
+    @media (max-width: 984px) {
+      font-size: 16px;
+    }
+  }
+
+  & .currencyWrapper {
+    @media (max-width: 536px) {
+      padding-top: 17px;
+    }
+
+    & .tabsWrapper {
+      padding-top: 12px;
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: 984px) {
+        width: 100%;
+      }
+
+      @media (max-width: 536px) {
+        padding-top: 4px;
+      }
+    }
+  }
+
+  & .priceWrapper {
+    & .price {
+      @include heading;
+      line-height: 1;
+      margin-top: 14px;
+
+      @media (min-width: 1470px) {
+        width: 242px;
+        height: 58px;
+        line-height: 58px;
+      }
+
+      @media (max-width: 984px) {
+        font-size: 32px;
+      }
+
+      @media (max-width: 536px) {
+        margin-top: 0;
+      }
+
+      & .unit {
+        font-size: 33px;
+
+        @media (max-width: 984px) {
+          font-size: 24px;
+        }
+      }
+
+      &.usdt {
+        color: $color-green-mint;
+        text-shadow: 0px 0px 16px $color-green-mint-08;
+      }
+      &.water {
+        color: $color-blue-2260;
+        text-shadow: 0px 0px 16px $color-blue-2260-08;
+      }
+      &.energy {
+        color: $color-yellow-e5;
+        text-shadow: 0px 0px 16px $color-yellow-e5-08;
+      }
+      &.oxygen {
+        color: $color-blue-frosty;
+        text-shadow: 0px 0px 16px $color-blue-frosty-08;
+      }
+    }
+  }
+}

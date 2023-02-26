@@ -1,0 +1,204 @@
+@use 'styles' as *;
+
+.tabItem,
+.selectedTabItem {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  & .label {
+    @include gameMenuText;
+    padding-left: 8px;
+    white-space: nowrap;
+
+    &[data-active='true'] {
+      color: transparent;
+      position: relative;
+      &::after {
+        content: attr(data-value);
+        position: absolute;
+        left: 3px;
+        font-weight: $fw-bold;
+        color: $color-green-lime;
+        transition: color 0.3s ease;
+      }
+    }
+
+    @include mobile-laptop {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    @include mobile-tablet {
+      font-size: 20px;
+      line-height: 20px;
+      padding-left: 6px;
+    }
+  }
+
+  @include mobile-tablet {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+}
+
+.selectedTabItem {
+  & .firstClass {
+    top: 65px;
+    max-width: 526px;
+    width: 100%;
+    position: absolute;
+    height: 11px;
+    padding: 6px;
+    overflow-y: hidden;
+    right: 50%;
+    transform: rotate(180deg) translateX(-56%);
+    border-radius: 13px 13px 0 0;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-bottom: none;
+    background-color: transparent;
+    z-index: 100;
+
+    @include mobile-laptop {
+      top: 58px;
+    }
+
+    @include mobile-tablet {
+      border: none;
+      transform: rotate(0) translateX(56%);
+      height: 5px;
+      padding: 0;
+      top: 36px;
+      box-shadow: 0px 0px 16px $color-green-lime;
+    }
+  }
+
+  & .lastClass {
+    height: 10px;
+    background-color: $color-green-lime;
+    border-radius: 5px;
+  }
+  & .label {
+    color: transparent;
+  }
+
+  &::after {
+    opacity: 1 !important;
+    transition: opacity 0.3s ease;
+  }
+}
+
+.tabItemDropDown:hover {
+  & .label {
+    color: $color-green-lime;
+
+    &[data-active='true'] {
+      color: transparent !important;
+    }
+  }
+}
+
+.tabItemDropDownWrap {
+  @include gameMenuText;
+  position: relative;
+  list-style: none;
+
+  & .tabItemDropDown {
+    background: none;
+    border: none;
+    padding: 0;
+    align-self: flex-start;
+
+    & .arrow {
+      padding: 0 0 0 10px;
+      transform: translateY(2px);
+    }
+
+    & .reverseArrow {
+      padding: 0 10px 0 0;
+      transform: rotate(180deg) translateY(4px);
+    }
+  }
+
+  & .dropDownList {
+    padding: 0 0 20px 0;
+    list-style: none;
+    background-color: $color-white-007-no-opacity;
+    position: absolute;
+    width: 150%;
+    top: 42px;
+    left: -25%;
+    text-align: center;
+    border-radius: 0 0 18px 18px;
+  }
+
+  & .hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  @include mobile-laptop {
+    font-size: 20px;
+  }
+}
+
+.dropDownItem {
+  cursor: pointer;
+
+  &:hover {
+    color: $color-green-lime;
+  }
+}
+
+.tabItem {
+  position: relative;
+
+  &::after {
+    content: attr(data-value);
+    position: absolute;
+    left: 32px;
+    width: 100%;
+    color: $color-green-lime;
+    font-size: 28px;
+    font-weight: 800;
+    opacity: 0;
+
+    @include mobile-laptop {
+      font-size: 20px;
+    }
+
+    @include mobile-tablet {
+      left: 30px;
+    }
+  }
+}
+
+.disableItem {
+  opacity: 0.5;
+  cursor: initial;
+  &:hover {
+    cursor: initial;
+  }
+}
+
+.disableButton {
+  background: none;
+  border: none;
+  &:hover {
+    cursor: initial;
+  }
+}

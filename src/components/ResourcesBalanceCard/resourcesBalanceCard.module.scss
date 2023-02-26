@@ -1,0 +1,236 @@
+@use 'styles' as *;
+
+.balanceCard {
+  width: 712px;
+  height: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  @include mobile-tablet {
+    width: 288px;
+    background: $color-white-01;
+    border: 1px solid $color-white-15;
+    border-top: none;
+    border-bottom: none;
+    margin: 20px 0 19px;
+    position: relative;
+    padding: 0 20px 19px;
+
+    &::before {
+      content: '';
+      width: 288px;
+      height: 35px;
+      position: absolute;
+      top: -35px;
+      left: -1px;
+    }
+
+    &::after {
+      content: '';
+      width: 288px;
+      height: 35px;
+      position: absolute;
+      bottom: -35px;
+      left: -1px;
+      transform: rotate(180deg);
+    }
+
+    &.usdt::before,
+    &.usdt::after {
+      background-image: url('../../../public/assets/img/balanceCardUsdtTabletBG.svg');
+    }
+
+    &.usdt::before {
+      top: -34px;
+    }
+    &.usdt::after {
+      bottom: -34px;
+    }
+
+    &.map::before,
+    &.map::after {
+      background-image: url('../../../public/assets/img/balanceCardMapTabletBG.svg');
+    }
+  }
+
+  @media (max-width: 617px) {
+    height: fit-content;
+
+    &:not(:last-child) {
+      margin-bottom: 31px;
+    }
+  }
+
+  & .bg {
+    position: absolute;
+    top: -17px;
+    left: -17px;
+
+    @include mobile-tablet {
+      display: none;
+    }
+  }
+
+  & .balanceTitle {
+    @include lightText;
+    letter-spacing: 0.1em;
+    color: $color-white;
+    opacity: 0.5;
+    text-transform: uppercase;
+    padding-top: 45px;
+
+    @include mobile-tablet {
+      padding-top: 9px;
+      font-size: 15px;
+    }
+  }
+
+  & .balnceAmount {
+    font-size: 64px;
+    font-weight: $fw-extrabold;
+    color: $color-white;
+    padding-left: 69px;
+    position: relative;
+    padding-top: 17px;
+
+    @include mobile-tablet {
+      padding-top: 12px;
+      padding-left: 40px;
+      font-size: 36px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+
+      @include mobile-tablet {
+        transform: scale(0.6);
+      }
+    }
+
+    &.usdt::after {
+      width: 109px;
+      height: 101px;
+      background-image: url('../../../public/assets/img/usdt.svg');
+      top: -2px;
+      left: -33px;
+
+      @include mobile-tablet {
+        top: -22px;
+        left: -40px;
+      }
+    }
+
+    &.map::after {
+      width: 60px;
+      height: 56px;
+      background-image: url('../../../public/assets/img/map.svg');
+      top: 15px;
+      left: -4px;
+
+      @include mobile-tablet {
+        top: -2px;
+        left: -16px;
+      }
+    }
+    
+    & .fsSmall {
+      font-size: 47px;
+
+      @include mobile-tablet {
+        font-size: 30px;
+      }
+    }
+  }
+
+  & .featureWrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 29px;
+
+    @include mobile-tablet {
+      flex-direction: column;
+      width: 100%;
+      padding-top: 19px;
+    }
+
+    & .featureBtn {
+      height: 50px;
+      width: fit-content;
+      border: 2px solid $color-white-18;
+      border-radius: 12px;
+      @include regularCardText;
+      color: $color-white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0px 27px 0 52px;
+      margin: 0;
+      position: relative;
+      background-color: transparent;
+      cursor: pointer;
+
+      @include mobile-tablet {
+        width: 100%;
+        height: 46px;
+        justify-content: flex-start;
+        padding: 0 0 0 47px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 8px;
+
+        @include mobile-tablet {
+          margin-right: 0;
+          margin-bottom: 8px;
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 23px;
+        height: 23px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        top: 11px;
+        left: 21px;
+
+        @include mobile-tablet {
+          top: 9px;
+          left: 16px;
+        }
+      }
+
+      &.usdt {
+        &.add::before {
+          background-image: url('../../../public/assets/icons/recources/usdt-plus.svg');
+        }
+
+        &.transfer::before {
+          background-image: url('../../../public/assets/icons/recources/usdt-transfer.svg');
+        }
+
+        &.withdraw::before {
+          background-image: url('../../../public/assets/icons/recources/usdt-withdraw.svg');
+        }
+      }
+
+      &.map {
+        &.add::before {
+          background-image: url('../../../public/assets/icons/recources/map-plus.svg');
+        }
+
+        &.transfer::before {
+          background-image: url('../../../public/assets/icons/recources/map-transfer.svg');
+        }
+      }
+    }
+  }
+}

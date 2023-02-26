@@ -1,0 +1,14 @@
+@use 'styles' as *;
+
+.lazyLoadingBtnWrapper {
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 37px;
+
+  & .lazyLoadingBtn {
+    @include regularText;
+    letter-spacing: 0.1em;
+  }
+}

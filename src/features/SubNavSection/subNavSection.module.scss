@@ -1,0 +1,118 @@
+@use 'styles' as *;
+
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 34px 39px;
+  max-width: 1440px;
+  border: 1px solid $color-white-01;
+  border-radius: 18px;
+  background-color: $color-white-01;
+
+  @include mobile-big-tablet {
+    gap: 16px;
+  }
+
+  @include mobile-tablet {
+    flex-direction: column;
+
+    border: 1px solid $color-white-01;
+    background-color: $color-white-007;
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    padding: 18px 16px 16px;
+    gap: 10px;
+    backdrop-filter: blur(40px);
+  }
+}
+
+.leftLineContainer,
+.rightLineContainer {
+  position: absolute;
+  top: 92px;
+  max-width: 121px;
+  width: 100%;
+  height: 11px;
+  padding: 6px;
+  overflow-y: hidden;
+
+  border-radius: 13px 13px 0 0;
+  border: 2px solid rgba($color-white, 0.25);
+  border-bottom: none;
+  background-color: $color-black;
+  z-index: 100;
+
+  @include mobile-tablet {
+    display: none;
+  }
+}
+
+.bottomLineBlock {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0 62px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.bottomLineContainer {
+  top: 92px;
+  max-width: 205px;
+  width: 100%;
+  height: 11px;
+  padding: 6px;
+  overflow-y: hidden;
+
+  border-radius: 13px 13px 0 0;
+  border: 2px solid rgba($color-white, 0.25);
+  border-bottom: none;
+  background-color: $color-black;
+  z-index: 100;
+
+  @include mobile-tablet {
+    display: none;
+  }
+}
+
+.leftLineContainer {
+  left: -56px;
+  transform: rotate(90deg);
+}
+
+.rightLineContainer {
+  right: -55px;
+  transform: rotate(-90deg);
+}
+
+.line {
+  height: 5px;
+  background-color: $color-green-05;
+  box-shadow: 5px 5px 93px 15px $color-green-08;
+  border-radius: 5px 5px 0 0;
+}
+
+.lineYellow {
+  height: 5px;
+  background-color: $color-yellow-e6;
+  box-shadow: 1px -10px 83px 12px $color-yellow-e6;
+  border-radius: 5px 5px 0 0;
+}
+
+.linePurple {
+  height: 5px;
+  background-color: $color-aniline-purple;
+  box-shadow: 1px -10px 83px 12px $color-aniline-purple;
+  border-radius: 5px 5px 0 0;
+}
+
+.lineBlue {
+  height: 5px;
+  background-color: $color-blue-frosty;
+  box-shadow: 1px -10px 83px 12px $color-blue-frosty;
+  border-radius: 5px 5px 0 0;
+}

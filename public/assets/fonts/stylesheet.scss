@@ -1,0 +1,76 @@
+$neuePlain: 'PP Neue Machina Plain';
+$neueInktrap: 'PP Neue Machina Inktrap';
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-extrabold: 800;
+
+@font-face {
+  font-family: $neuePlain;
+  font-weight: $fw-light;
+  font-style: normal;
+  src: url('./PPNeue/Plain/PPNeueMachina-PlainLight.otf') format('opentype'),
+    url('./PPNeue/Plain/PPNeueMachina-PlainLight.woff2') format('woff2'),
+    url('./PPNeue/Plain/PPNeueMachina-PlainLight.woff') format('woff'),
+    url('./PPNeue/Plain/PPNeueMachina-PlainLight.eot') format('eot'),
+    url('./PPNeue/Plain/PPNeueMachina-PlainLight.svg') format('svg'),
+    url('./PPNeue/Plain/PPNeueMachina-PlainLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: $neuePlain;
+  font-weight: $fw-regular;
+  font-style: normal;
+  src: url('./PPNeue/Plain/PPNeueMachina-PlainRegular.otf') format('opentype'),
+    url('./PPNeue/Plain/PPNeueMachina-PlainRegular.woff2') format('woff2'),
+    url('./PPNeue/Plain/PPNeueMachina-PlainRegular.woff') format('woff'),
+    url('./PPNeue/Plain/PPNeueMachina-PlainRegular.eot') format('eot'),
+    url('./PPNeue/Plain/PPNeueMachina-PlainRegular.svg') format('svg'),
+    url('./PPNeue/Plain/PPNeueMachina-PlainRegular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: $neuePlain;
+  font-weight: $fw-extrabold;
+  font-style: normal;
+  src: url('./PPNeue/Plain/PPNeueMachina-PlainUltrabold.otf') format('opentype'),
+    url('./PPNeue/Plain/PPNeueMachina-PlainUltrabold.woff2') format('woff2'),
+    url('./PPNeue/Plain/PPNeueMachina-PlainUltrabold.woff') format('woff'),
+    url('./PPNeue/Plain/PPNeueMachina-PlainUltrabold.eot') format('eot'),
+    url('./PPNeue/Plain/PPNeueMachina-PlainUltrabold.svg') format('svg'),
+    url('./PPNeue/Plain/PPNeueMachina-PlainUltrabold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: $neuePlain;
+  font-weight: $fw-extrabold;
+  font-style: italic;
+  src: url('./PPNeue/Plain/PPNeueMachina-PlainUltraboldItalic.otf')
+      format('opentype'),
+    url('./PPNeue/Plain/PPNeueMachina-PlainUltraboldItalic.woff2')
+      format('woff2'),
+    url('./PPNeue/Plain/PPNeueMachina-PlainUltraboldItalic.woff') format('woff'),
+    url('./PPNeue/Plain/PPNeueMachina-PlainUltraboldItalic.eot') format('eot'),
+    url('./PPNeue/Plain/PPNeueMachina-PlainUltraboldItalic.svg') format('svg'),
+    url('./PPNeue/Plain/PPNeueMachina-PlainUltraboldItalic.ttf')
+      format('truetype');
+}
+
+@font-face {
+  font-family: $neueInktrap;
+  font-weight: $fw-regular;
+  font-style: italic;
+  src: url('./PPNeue/Inktrap/PPNeueMachina-InktrapRegularItalic.otf')
+      format('opentype'),
+    url('./PPNeue/Inktrap/PPNeueMachina-InktrapRegularItalic.woff2')
+      format('woff2'),
+    url('./PPNeue/Inktrap/PPNeueMachina-InktrapRegularItalic.woff')
+      format('woff'),
+    url('./PPNeue/Inktrap/PPNeueMachina-InktrapRegularItalic.eot') format('eot'),
+    url('./PPNeue/Inktrap/PPNeueMachina-InktrapRegularItalic.svg') format('svg'),
+    url('./PPNeue/Inktrap/PPNeueMachina-InktrapRegularItalic.ttf')
+      format('opentype');
+}

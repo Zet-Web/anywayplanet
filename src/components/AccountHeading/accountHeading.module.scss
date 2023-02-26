@@ -1,0 +1,55 @@
+@use 'styles' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & .breadcrampsContainer {
+    @include lightText;
+    text-transform: uppercase;
+    display: flex;
+    align-items: baseline;
+
+    @media (max-width: 617px) {
+      font-size: 13px;
+    }
+
+    & .breadcrampsTitle {
+      color: $color-white;
+      opacity: 0.5;
+      padding-left: 5px;
+    }
+  }
+
+  & .title {
+    @include mainHeading;
+    line-height: 97px;
+    color: $color-white;
+    text-transform: uppercase;
+    position: relative;
+    width: fit-content;
+
+    @media (max-width: 617px) {
+      font-size: 36px;
+      line-height: 64px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 10px;
+      left: -5%;
+      width: 110%;
+      height: 2px;
+      background: linear-gradient(
+        90deg,
+        rgba(82, 255, 0, 0) 0%,
+        $color-green-lime 28.77%,
+        $color-green-lime 70.09%,
+        rgba(82, 255, 0, 0) 100.43%
+      );
+      box-shadow: 0px 0px 16px $color-green-08;
+    }
+  }
+}

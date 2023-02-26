@@ -1,0 +1,83 @@
+@use 'styles' as *;
+
+.container {
+  display: inline-flex;
+  align-items: flex-start;
+
+  & .iconWrapper > span {
+    width: 96px !important;
+    height: 108px !important;
+
+    @include mobile-tablet {
+      width: 51px !important;
+      height: 56px !important;
+    }
+
+    & img {
+      padding-top: 12px !important;
+
+      @include mobile-tablet {
+        padding-top: 0 !important;
+        padding-bottom: 5px !important;
+      }
+    }
+  }
+
+  & .title {
+    @include heading;
+    display: flex;
+    flex-direction: column;
+    color: $color-white;
+    text-transform: uppercase;
+
+    @include mobile-laptop {
+      font-size: 32px;
+    }
+
+    @include mobile-tablet {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+
+  & .titleLPadding {
+    padding-left: 30px;
+    @include mobile {
+      padding-left: 0;
+    }
+  }
+
+  @include mobile-tablet {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.left {
+  text-align: left;
+  .title {
+    align-items: flex-start;
+
+    @include mobile-tablet {
+      align-items: center;
+    }
+  }
+}
+
+.center {
+  text-align: center;
+  .title {
+    align-items: center;
+  }
+}
+
+.right {
+  text-align: right;
+  .title {
+    align-items: flex-end;
+
+    @include mobile-tablet {
+      align-items: center;
+    }
+  }
+}

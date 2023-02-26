@@ -1,0 +1,431 @@
+@use 'styles' as *;
+
+.wrapper {
+  max-width: 1470px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.label {
+  color: $color-white;
+  text-transform: uppercase;
+  font-weight: $fw-regular;
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.tabsList {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+  @include mobile-laptop {
+    justify-content: center;
+  }
+
+}
+
+.filterMenuDesktop{
+  margin-bottom: 25px;
+  @include mobile-big-tablet {
+    display: none;
+  }
+}
+.filterMenuMobile{
+  display: none;
+  padding: 0 15px;
+  @include mobile-big-tablet {
+    display: block;
+  }
+}
+
+.tabItem {
+  width: 198px;
+  height: 59px;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 0 5px 15px 0;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 22px;
+  font-weight: 400;
+  color: #FFFFFF;
+  &:hover{
+    border: 1px solid #52FF00;
+    color: #52FF00;
+    background: rgba(82, 255, 0, 0.15);
+    cursor: pointer;
+  }
+}
+.wrapperMenu{
+  width: 100%;
+  position: relative;
+}
+.buttonItem {
+  height: 56px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.07);
+  margin: 0 5px 15px 0;
+  @include menuText;
+  font-size: 22px;
+  font-weight: 400;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.arrowMenu{
+  position: absolute;
+  width: 20px;
+  height: 13px;
+  right: 25px;
+  top: 22px;
+  background-image: url("../../../public/assets/icons/resourcesTable/arrow.svg");
+  background-repeat: no-repeat;
+}
+
+.active{
+  background: $color-green-015;
+  border: 3px solid $color-green-05;
+  color: $color-green-lime  !important;
+}
+
+.iconBg{
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+}
+
+.icon{
+  display: block;
+  margin-right: 20px;
+}
+
+.main{
+  padding: 32px 40px 8px 48px;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 18px;
+  outline-offset: 5px;
+  margin-bottom: 20px;
+  @include mobile-laptop {
+    width: 930px;
+    margin: 0 auto;
+  }
+  @include mobile-big-tablet {
+    width: initial;
+    padding: 0 15px;
+    background: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    outline-offset: initial;
+    margin-bottom: 0;
+
+  }
+}
+
+.mainTitle{
+  display: flex;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 16px;
+  padding-bottom: 14px;
+  color: #FFFFFF;
+  opacity: 0.6;
+  @include mobile-big-tablet {
+    display: none;
+  }
+}
+
+
+.time{
+  text-align: left;
+  min-width: 296px;
+  margin-right: 150px;
+  @include mobile-laptop {
+    min-width: 0;
+    width: 165px;
+    margin-right: 20px;
+  }
+}
+
+.type{
+  text-align: left;
+  min-width: 174px;
+  margin-right: 183px;
+  @include mobile-laptop {
+    margin-right: 20px;
+  }
+}
+
+.currency{
+  text-align: left;
+  min-width: 225px;
+  margin-right: 111px;
+ @include mobile-laptop {
+    margin-right: 20px;
+  }
+}
+
+.amount{
+  text-align: right;
+  min-width: 206px;
+}
+
+.mainList{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  @include mobile-big-tablet {
+    gap: 5px;
+    justify-content: center;
+  }
+}
+
+.mainItem{
+  display: flex;
+  border-bottom: 1px solid #323A46;
+  align-items: center;
+  &:last-child{
+    border-bottom: none;
+  }
+  @include mobile-big-tablet {
+    display: grid;
+    grid-template-rows: 65px 65px;
+    grid-template-columns: 127px 127px;
+    row-gap: 3px;
+    padding: 16px 16px;
+    background: rgba(255, 255, 255, 0.07);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    border-radius: 18px;
+    outline-offset: 5px;
+    align-items: start;
+  }
+}
+
+.dateAndTime{
+  width: 296px;
+  color: #FFFFFF;
+  text-align: left;
+  margin-right: 150px;
+ @include mobile-laptop {
+    min-width: 0;
+    width: 165px;
+    margin-right: 20px;
+  }
+  @include mobile-big-tablet {
+    width: 127px;
+    margin-right: 0;
+    font-weight: 300;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #323A46;
+  }
+}
+
+.transactionType{
+  color: #FFFFFF;
+  width: 174px;
+  text-align: left;
+  margin-right: 166px;
+ @include mobile-laptop {
+    min-width: 0;
+    width: 165px;
+    margin-right: 20px;
+  }
+  @include mobile-big-tablet {
+    width: 127px;
+    margin-right: 0;
+    font-weight: 300;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #323A46;
+  }
+}
+
+.transactionCurrency{
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  width: 225px;
+  text-align: left;
+  margin-right: 110px;
+  text-transform: uppercase;
+ @include mobile-laptop {
+   //padding-left: 75px;
+    min-width: 0;
+    width: 165px;
+  }
+  @include mobile-big-tablet {
+    position: relative;
+    width: 127px;
+    margin: 10px 0 0 0 ;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 300;
+  }
+}
+
+.color{
+  width: 206px;
+  text-align: right;
+  @include mobile-big-tablet {
+    width: 127px;
+    text-align: initial;
+  }
+}
+.red{
+  composes: color;
+  color: $color-red-3d;
+
+}
+.green{
+  composes: color;
+  color: $color-green-lime;
+}
+.mapIcon{
+  padding: 0 18px;
+}
+
+.img {
+  width: 68px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-position: top -10px right -6px;
+  @include mobile-big-tablet {
+    position: absolute;
+    top: 21px;
+    left: -25px;
+  }
+}
+
+.imgAll{
+  composes: img;
+  background-image: url("../../../public/assets/icons/resourcesTable/all.svg") ;
+}
+.imgUsdt{
+  composes: img;
+  background-image: url("../../../public/assets/icons/resourcesTable/usdtEffect.svg") ;
+}
+.imgMinerals{
+  composes: img;
+  background-image: url("../../../public/assets/icons/resourcesTable/minerals.svg") ;
+}
+.imgEnergy{
+  composes: img;
+  background-image: url("../../../public/assets/icons/resourcesTable/energyEffect.svg") ;
+  background-position: top -10px right 0px;
+}
+.imgOxygen{
+  composes: img;
+  background-image: url("../../../public/assets/icons/resourcesTable/oxygenEffect.svg") ;
+  @include mobile-big-tablet {
+    left: -21px;
+  }
+}
+.imgWater{
+  composes: img;
+  background-image: url("../../../public/assets/icons/resourcesTable/glasofWaterEffect.svg") ;
+}
+.imgMap{
+  composes: img;
+  background-image: url("../../../public/assets/icons/resourcesTable/map.svg") ;
+  background-position: top 8px right 11px;
+}
+
+.usdtColor{
+  @include mobile-big-tablet {
+     color: $color-green-meadow;
+  }
+}
+.mineralsColor{
+  @include mobile-big-tablet {
+    color: $color-aniline-purple;
+  }
+}
+.energyColor{
+  @include mobile-big-tablet {
+    color: $color-yellow-e5;
+  }
+}
+.oxygenColor{
+  @include mobile-big-tablet {
+    color: $color-blue-frosty;
+  }
+
+}
+.waterColor{
+  @include mobile-big-tablet {
+    color: #0047FF;
+  }
+}
+.mapColor{
+  @include mobile-big-tablet {
+    color: #FFFFFF;
+  }
+}
+
+.textMobile {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding-bottom: 7px;
+  opacity: 0.6;
+}
+.dateMobile{
+  display: none;
+  @include mobile-big-tablet {
+    display: block;
+    composes: textMobile;
+  }
+}
+.transactionTypeMobile{
+  display: none;
+  @include mobile-big-tablet {
+    display: block;
+    composes: textMobile;
+  }
+}
+.transactionCurrencyMobile{
+  display: none;
+  @include mobile-big-tablet {
+    display: block;
+    composes: textMobile;
+
+  }
+}
+.transactionCurrencyTextMobile{
+  @include mobile-big-tablet {
+    padding:  2px 0 0  38px;
+  }
+
+
+}
+.transactionAmountMobile{
+  display: none;
+  @include mobile-big-tablet {
+    display: block;
+    margin-top: 10px;
+    composes: textMobile;
+    text-align: initial;
+    color: #FFFFFF;
+  }
+}
+
+
+
+
+
+

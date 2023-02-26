@@ -1,0 +1,70 @@
+@use 'styles' as *;
+
+.resourceDushBoard {
+  max-width: 1470px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  & .mainTitle {
+    padding-bottom: 56px;
+
+    @media (max-width: 617px) {
+      font-size: 13px;
+      padding-bottom: 21px;
+    }
+  }
+
+  & .balanceWrapp {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media (max-width: 1453px) {
+      flex-direction: column;
+      min-height: 616px;
+    }
+
+    @include mobile-tablet {
+      min-height: fit-content;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: space-evenly;
+    }
+
+    @media (max-width: 617px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  & .tokenWrapp {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+
+    @media (max-width: 1453px) {
+      max-width: 712px;
+      margin: 0 auto;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 15px;
+      grid-row-gap: 15px;
+    }
+
+    @include mobile-tablet {
+      display: flex;
+      min-height: fit-content;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      grid-row-gap: 14px;
+      padding-top: 14px;
+    }
+  }
+}

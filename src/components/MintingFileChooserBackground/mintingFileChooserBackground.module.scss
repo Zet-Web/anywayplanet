@@ -1,0 +1,64 @@
+@use 'styles' as *;
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -15px;
+  left: -12px;
+
+  @media (max-width: 984px) {
+    top: 0;
+    left: 0;
+  }
+  @media (max-width: 536px) {
+    width: 136px;
+    height: 198px;
+
+    top: 5px;
+    left: -3px;
+  }
+
+  &.normal {
+    g.colorBorder {
+      &:nth-child(even) {
+        opacity: 1;
+      }
+      & path {
+        fill: $color-green-lime;
+      }
+    }
+  }
+
+  &.rare {
+    g.colorBorder {
+      &:nth-child(2n) {
+        opacity: 1;
+      }
+      & path {
+        fill: $color-blue-frosty;
+      }
+    }
+  }
+
+  &.epic {
+    g.colorBorder {
+      &:nth-child(2n) {
+        opacity: 1;
+      }
+      & path {
+        fill: $color-yellow-e5;
+      }
+    }
+  }
+
+  &.legend {
+    g.colorBorder {
+      &:nth-child(2n) {
+        opacity: 1;
+      }
+      & path {
+        fill: $color-aniline-purple;
+      }
+    }
+  }
+}

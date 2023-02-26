@@ -1,0 +1,44 @@
+@use 'styles' as *;
+
+.wrapper {
+  position: relative;
+  max-width: 1470px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  z-index: 12;
+  justify-content: space-between;
+  padding-top: 30px;
+  transition: padding 0.3s ease;
+
+  @include mobile-tablet {
+    display: block;
+    padding-top: 0;
+  }
+
+  &.active {
+    background: #030f20;
+  }
+
+}
+
+.navbar {
+  @include mobile-tablet {
+    display: none;
+  }
+}
+
+.mainMenu {
+  @include big-tablet-desktop {
+    display: none !important;
+  }
+}
+
+.logo {
+  @include mobile-tablet {
+    width: 204px;
+    padding-top: 17px;
+    padding-left: 16px;
+  }
+}

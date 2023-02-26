@@ -1,0 +1,89 @@
+@use '../../styles' as *;
+
+.slider {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  overflow: visible;
+
+  .title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color-black;
+  }
+
+  .description {
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
+
+  [class='swiper-pagination-bullet'] {
+    width: 6px;
+    height: 6px;
+  }
+
+  [class*='swiper-pagination-bullet-active'] {
+    width: 8px;
+    height: 8px;
+    transform: unset;
+  }
+
+  [class*='swiper'] {
+    overflow: visible;
+  }
+}
+
+.swiperButtonPrev,
+.swiperButtonNext {
+  width: 32px;
+  height: 32px;
+  z-index: 1;
+  border: none;
+  outline: none;
+}
+
+.swiperButtonPrev {
+  background: url('../../../public/assets/img/arrowSlidesvg.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: -104px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 72px;
+  height: 72px;
+}
+
+.swiperButtonNext {
+  background-image: url('../../../public/assets/img/arrowSlidesvg.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 104px;
+  transform: translateY(-50%) rotate(180deg);
+  cursor: pointer;
+  width: 72px;
+  height: 72px;
+}
+
+.default {
+  right: -104px;
+  opacity: 1;
+}
+
+.nextElWrapper {
+  position: absolute;
+  top: 0;
+  right: -200px;
+  width: 200px;
+  height: 100%;
+  z-index: 999;
+  transition: 0.2s;
+}
+
+.swiperButtonNext::after,
+.swiperButtonPrev::after {
+  display: none;
+}

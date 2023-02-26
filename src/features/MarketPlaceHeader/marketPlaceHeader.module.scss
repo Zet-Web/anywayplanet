@@ -1,0 +1,62 @@
+@use 'styles' as *;
+
+.header {
+  position: relative;
+  max-width: 1470px;
+  margin: 0 auto;
+  padding: 0 15px;
+  padding-top: 38px;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 11;
+
+  @include mobile-tablet {
+    display: flex;
+    padding-top: 14px;
+    padding-bottom: 18px;
+  }
+
+  &.active {
+    background: #030f20;
+  }
+}
+
+.desktopMenu {
+  @include mobile-tablet {
+    display: none;
+  }
+}
+
+.navbar {
+  @include mobile-tablet {
+    display: none;
+  }
+}
+
+.mainMenu {
+  @include big-tablet-desktop {
+    display: none !important;
+  }
+}
+
+.logo {
+  max-width: 229px;
+  margin-right: 15px;
+
+  @include mobile-laptop {
+    margin-left: 50px;
+    width: 167px;
+    height: 49px;
+  }
+
+  @include big-tablet {
+    width: 100%;
+  }
+
+  @include big-tablet-desktop {
+    margin-right: 15px;
+    width: 100%;
+  }
+}

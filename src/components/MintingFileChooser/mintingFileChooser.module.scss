@@ -1,0 +1,73 @@
+@use 'styles' as *;
+
+.wrapper {
+  width: 350px;
+  height: 507px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 35px 87px 0px 63px;
+
+  @media (max-width: 984px) {
+    width: 250px;
+    height: 371px;
+    padding: 0;
+  }
+
+  @media (max-width: 536px) {
+    width: 124px;
+    height: 184px;
+    justify-content: start;
+    padding: 39px 0 0px 0;
+  }
+
+  & .title {
+    @include headMenuText;
+    color: $color-white;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 63px;
+
+    @media (max-width: 984px) {
+      padding-top: 16px;
+      font-size: 10px;
+      line-height: 1;
+    }
+
+    @media (max-width: 536px) {
+      line-height: 1.5;
+    }
+
+    &.oxygen span {
+      color: $color-blue-frosty;
+    }
+
+    &.water span {
+      color: $color-blue-2260;
+    }
+
+    &.energy span {
+      color: $color-yellow-e5;
+    }
+
+    &.minerals span {
+      color: $color-aniline-purple;
+    }
+  }
+
+  & .visuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}

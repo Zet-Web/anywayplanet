@@ -1,0 +1,79 @@
+@use 'styles' as *;
+
+.filterTab {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    cursor: pointer;
+
+    background: $color-white-007;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(40px);
+    border: 3px solid transparent;
+    border-radius: 18px;
+    padding: 0 1.5em 0 0.4em;
+    color: $color-white;
+    font-size: 24px;
+
+
+    &.active {
+        .filterTabLabel {
+            font-weight: $fw-extrabold;
+        }
+
+        .filterTabCount {
+            text-shadow: 0px 0px 16px !important
+        }
+    }
+
+    &:not(.active) .filterTabCount {
+        opacity: 0.5;
+    }
+
+    @include mobile-big-tablet {
+        padding: 0;
+
+        .filterTabLabel {
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .filterTabCount {
+            padding-left: 0.8em;
+            font-weight: $fw-extrabold;
+            opacity: 1 !important;
+            transform: translateY(-10px);
+        }
+
+        .mobileAndTabletBreak {
+            flex-basis: 100%;
+            height: 0;
+        }
+    }
+
+    .filterTabHeader {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+    }
+}
+.oxygenBackground{
+     background: rgba(0, 194, 255, 0.2);
+     border: 3px solid rgba(0, 194, 255, 0.5);
+    color: rgba(0, 194, 255)  ;
+ }
+.energyBackground{
+    background: rgba(255, 229, 0, 0.2);
+    border: 3px solid rgba(255, 229, 0, 0.5);
+    color: rgba(255, 229, 0)  ;
+}
+.waterBackground{
+    background: rgba(0,71,255, 0.2);
+    border: 3px solid rgba(0,71,255, 0.5);
+    color: rgba(0,71,255,) ;
+}
+.mineralsBackground{
+    background: rgba(255,0,138, 0.2);
+    border: 3px solid rgba(255,0,138, 0.5);
+    color: rgba(255,0,138)  ;
+}

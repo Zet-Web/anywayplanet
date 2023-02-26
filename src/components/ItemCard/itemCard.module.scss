@@ -1,0 +1,287 @@
+@use 'styles' as *;
+
+.itemCard {
+  width: 320px;
+  height: 475px;
+  border-radius: 18px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 15px;
+  position: relative;
+  @include mobile {
+    width: 288px;
+    height: 427px;
+  }
+}
+
+.bg {
+  position: absolute;
+  width: 320px;
+  height: 475px;
+  background-size: cover;
+  @include mobile {
+    width: 288px;
+    height: 427px;
+  }
+}
+
+.bgRare {
+  composes: bg;
+  background: url('../../../public/assets/img/CardBgRare.svg') 50% 50% no-repeat;
+  @include mobile {
+    background: url('../../../public/assets/img/CardBgRareSmall.svg') 50% 50%
+      no-repeat;
+  }
+}
+
+.bgEpic {
+  composes: bg;
+  background: url('../../../public/assets/img/CardBgEpic.svg') 50% 50% no-repeat;
+  @include mobile {
+    background: url('../../../public/assets/img/CardBgEpicSmall.svg') 50% 50%
+      no-repeat;
+  }
+}
+
+.bgLegend {
+  composes: bg;
+  background: url('../../../public/assets/img/CardBgLegend.svg') 50% 50%
+    no-repeat;
+  @include mobile {
+    background: url('../../../public/assets/img/CardBgLegendSmall.svg') 50% 50%
+      no-repeat;
+  }
+}
+.bgCommon {
+  composes: bg;
+  color: $color-green-lime;
+  background: url('../../../public/assets/img/CardBgCommon.svg') 50% 50%
+    no-repeat;
+  @include mobile {
+    background: url('../../../public/assets/img/CardBgCommonSmall.svg') 50% 50%
+      no-repeat;
+  }
+}
+
+.bgNormal {
+  composes: bg;
+  background: url("../../../public/assets/img/CardBgNormal.svg") 50% 50% no-repeat;
+  @include mobile {
+    background: url("../../../public/assets/img/CardBgNormalSmall.svg") 50% 50% no-repeat;
+  }
+}
+
+.cardTop {
+  width: 240px;
+  height: 267px;
+  border-radius: 10px;
+  position: relative;
+  @include mobile {
+    width: 216px;
+    height: 240px;
+  }
+}
+
+.hash {
+  position: absolute;
+  top: 7px;
+  right: 6px;
+  padding: 5px 8px 4px 8px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: $fw-regular;
+  @include mobile {
+    padding: 4px 6px 2px 6px;
+  }
+}
+
+.quality {
+  padding: 6px 16px 4px 16px;
+  position: absolute;
+  border-radius: 6px;
+  text-transform: uppercase;
+  left: 6px;
+  bottom: 6px;
+  font-family: $neuePlain;
+  font-weight: $fw-regular;
+  letter-spacing: 0.1em;
+  @include mobile {
+    padding: 4px 8px 0px 8px;
+  }
+}
+
+.epic {
+  background-color: $color-yellow-e5;
+  & {
+    color: $color-blue-black;
+  }
+}
+.legend {
+  background-color: $color-aniline-purple;
+  & {
+    color: $color-white;
+  }
+}
+
+.rare {
+  background-color: $color-blue-frosty;
+  & {
+    color: $color-white;
+  }
+}
+.common {
+  background-color: $color-green-lime;
+  & {
+    color: $color-white;
+  }
+}
+
+.normal {
+  background-color: $color-green-label;
+  & {
+      color: $color-black;
+  }
+}
+
+.cardBottom {
+  width: 240px;
+  height: 128px;
+  border-radius: 9px;
+  background-color: $color-granite-gray;
+  overflow: hidden;
+  @include mobile {
+    width: 216px;
+    height: 115px;
+  }
+}
+
+.cardProgress {
+  width: 210px;
+  height: 10px;
+  background-color: $color-slate-gray;
+  margin-left: 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  @include mobile {
+    width: 189px;
+    height: 5px;
+  }
+}
+
+.progressLine {
+  height: 100%;
+  width: 60%;
+  background-color: $color-yellow-e6;
+  border-radius: 10px;
+}
+
+.epic {
+  background-color: $color-yellow-e5;
+}
+.legend {
+  background-color: $color-aniline-purple;
+}
+.rare {
+  background-color: $color-blue-frosty;
+}
+.common {
+  background-color: $color-green-lime;
+}
+
+.normal {
+    background-color: $color-green-label;
+}
+
+.nftText,
+.price {
+  margin-left: 15px;
+  font-weight: $fw-regular;
+}
+
+.nftText {
+  font-size: 11px;
+  margin-top: 11px;
+  @include mobile {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+}
+
+.price {
+  margin-top: 6px;
+  color: $color-white;
+  font-size: 13px;
+  font-weight: $fw-regular;
+  @include mobile {
+    font-size: 11px;
+    margin-top: 5px;
+  }
+}
+
+.priceNum {
+  font-size: 22px;
+  @include mobile {
+    font-size: 19px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  margin-top: 7px;
+  border-top: 1px solid $color-slate-gray;
+  width: 100%;
+}
+
+.level {
+  padding-top: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 44px;
+  font-size: 9px;
+  border-right: 1px solid $color-slate-gray;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.levelNum {
+  color: $color-white;
+  font-size: 13px;
+}
+
+.productivity {
+  padding-top: 7px;
+  padding-left: 15px;
+  font-size: 9px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.productivityNum {
+  font-size: 13px;
+  color: $color-white;
+}
+
+.epicText {
+  color: $color-yellow-e6;
+}
+
+.legendText {
+  color: $color-aniline-purple;
+}
+
+.rareText {
+  color: $color-blue-frosty;
+}
+.commonText {
+  color: $color-green-lime;
+}
+
+.normalText {
+    color: $color-green-label;
+}

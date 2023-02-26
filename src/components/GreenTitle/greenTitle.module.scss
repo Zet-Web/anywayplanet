@@ -1,0 +1,30 @@
+@use 'styles' as *;
+
+.greenTextContainer {
+  position: relative;
+  display: block;
+  font-weight: $fw-extrabold;
+  display: flex;
+  & .greenText {
+    color: $color-green-lime;
+    position: relative;
+    z-index: 2;
+  }
+
+  & .greenTextBorder {
+    display: block;
+    color: $color-black;
+    text-shadow: -2px 2px 0 $color-green-lime, 2px 2px 0 $color-green-lime,
+      2px -2px 0 $color-green-lime, -2px -2px 0 $color-green-lime,
+      0px 0px 8px $color-green-lime;
+    opacity: 0.3;
+    position: absolute;
+    top: 2px;
+
+    &.lightBorder {
+      text-shadow: -1px 1px 0 $color-green-lime, 1px 1px 0 $color-green-lime,
+        1px -1px 0 $color-green-lime, -1px -1px 0 $color-green-lime,
+        0px 0px 16px $color-green-lime;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@use 'styles' as *;
+
+.wrapper {
+  width: 100%;
+  background-color: #272a32;
+  position: relative;
+  overflow: hidden;
+
+  & .imgPlanet {
+    position: absolute;
+    top: 380px;
+    right: 0;
+    z-index: 1;
+
+    @include mobile-laptop {
+      width: 680px;
+    }
+
+    @include mobile-tablet {
+      display: none;
+    }
+  }
+
+  & .imgPlanet2 {
+    position: absolute;
+    bottom: -5px;
+    z-index: 1;
+
+    @include mobile-laptop {
+      width: 500px;
+    }
+
+    @include mobile-tablet {
+      display: none;
+    }
+  }
+
+  & .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    & span {
+      width: 1920px !important;
+    }
+
+    @include mobile-tablet {
+      display: none;
+    }
+  }
+
+  & .bodyWrapper {
+    max-width: 1470px;
+    margin: 0 auto;
+  }
+
+  & .headerWrapper {
+    padding-bottom: 23px;
+  }
+
+  & .cardCatalogWrapper {
+    width: 100%;
+    padding-bottom: 35px;
+  }
+
+  & .text {
+    position: relative;
+    z-index: 5;
+    max-width: 1030px;
+    text-align: center;
+    margin: 64px auto;
+
+    @media (max-width: 1100px) {
+      padding: 0 20px;
+    }
+
+    @include mobile-big-tablet {}
+
+  }
+
+  & .descrText {
+    font-family: $neuePlain;
+    line-height: 36px;
+    font-size: 24px;
+    color: $color-white;
+    text-align: center;
+    padding-bottom: 32px;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  & .resText {
+    font-family: $neuePlain;
+    line-height: 36px;
+    font-size: 24px;
+    color: $color-white;
+    font-weight: 600;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  & .yourNftWrapper {
+    margin: 65px 0;
+    display: flex;
+    justify-content: center
+  }
+}
+
+@media (max-width:768px) {
+  .yourNftWrapper {
+    margin: 25px 15px !important;
+  }
+}

@@ -1,0 +1,110 @@
+@mixin regularText {
+  font-family: $neuePlain;
+  font-style: normal;
+  font-weight: $fw-regular;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+@mixin titleExtraBoldTitleText {
+  font-family: $neuePlain;
+  font-style: normal;
+  font-weight: $fw-extrabold;
+  font-size: 48px;
+  line-height: 72px;
+}
+
+@mixin titleRegularTitleText {
+  font-family: $neuePlain;
+  font-style: normal;
+  font-weight: $fw-regular;
+  font-size: 48px;
+  line-height: 72px;
+}
+
+@mixin menuText {
+  font-family: $neuePlain;
+  font-style: normal;
+  font-weight: $fw-regular;
+  font-size: 20px;
+  line-height: 30px;
+  color: $color-white;
+}
+
+@mixin labelInput {
+  font-family: $neuePlain;
+  font-style: normal;
+  font-weight: $fw-regular;
+  font-size: 18px;
+  line-height: 25px;
+  color: $color-green-lime;
+}
+
+@mixin gameMenuText {
+  font-family: $neuePlain;
+  font-style: normal;
+  font-weight: $fw-regular;
+  font-size: 28px;
+  line-height: 42px;
+  color: $color-white;
+}
+
+
+// Font mixins
+@mixin regularCardText {
+  font-family: $neuePlain;
+  font-size: 18px;
+  font-weight: $fw-regular;
+  line-height: 27px;
+}
+
+@mixin lightText {
+  font-family: $neuePlain;
+  font-size: 19px;
+  font-weight: $fw-light;
+  line-height: 28.5px;
+}
+
+@mixin headMenuText {
+  font-family: $neuePlain;
+  font-weight: $fw-regular;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+@mixin regularText {
+  font-family: $neuePlain;
+  font-size: 24px;
+  font-weight: $fw-regular;
+  line-height: 36px;
+}
+
+@mixin heading {
+  font-family: $neuePlain;
+  font-size: 48px;
+  font-weight: $fw-regular;
+  line-height: 1.5;
+}
+
+@mixin mainHeading {
+  font-family: $neuePlain;
+  font-size: 80px;
+  font-weight: $fw-extrabold;
+  line-height: 120px;
+}
+
+@mixin italicText {
+  font-family: $neuePlain;
+  font-size: 64px;
+  font-style: italic;
+  font-weight: $fw-extrabold;
+  line-height: 96px;
+}
+
+@mixin italicInktrap {
+  font-family: $neueInktrap;
+  font-size: 26px;
+  font-style: italic;
+  font-weight: $fw-regular;
+  line-height: 39px;
+}

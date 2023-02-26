@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  dev:
+    container_name: mission_frontend
+    restart: always
+    build: .
+    environment:
+      - APP_ENV=development
+    volumes:
+      - ./src:/app/src
+      - ./test:/app/test
+    working_dir: /app
+    ports:
+      - "3000:3000"

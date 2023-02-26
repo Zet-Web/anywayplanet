@@ -1,0 +1,60 @@
+@use 'styles' as *;
+
+.rangeBlock {
+  width: 100%;
+  padding-top: 33px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid #3a3f4a;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.track {
+  height: 18px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px $color-green-08;
+}
+
+.values {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+  margin-bottom: 5px;
+}
+
+.value {
+  color: $color-white;
+  font-weight: $fw-extrabold;
+  font-size: 16px;
+
+  @include mobile-tablet {
+    font-size: 14px;
+  }
+}
+
+.fractionValue {
+  color: $color-green-lime;
+  font-weight: $fw-extrabold;
+}
+
+.fractionMaxValue {
+  font-size: 12px;
+}
+
+.thumb {
+  width: 6px;
+  height: 18px;
+  border-radius: 5px;
+  background-color: $color-white;
+  &:focus-visible {
+    outline: none;
+  }
+}

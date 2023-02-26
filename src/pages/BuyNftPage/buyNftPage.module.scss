@@ -1,0 +1,70 @@
+@use 'styles' as *;
+
+.loading {
+  text-align: center;
+  font-size: 24px;
+  color: $color-white;
+  margin-bottom: 50px;
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  & .imgPlanet {
+    position: absolute;
+    top: 240px;
+    right: -603px;
+
+    @include mobile-tablet {
+      display: none;
+    }
+  }
+
+  & .imgPlanet2 {
+    position: absolute;
+    top: 1553px;
+    left: -951px;
+
+    @include mobile-tablet {
+      display: none;
+    }
+  }
+
+  & .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    & span {
+      width: 1920px !important;
+      width: 2587px !important;
+    }
+
+    @include mobile-tablet {
+      display: none;
+    }
+  }
+
+  & .headerWrapper {
+    padding-bottom: 23px;
+  }
+
+  & .cardCatalogWrapper {
+    width: 100%;
+    padding-bottom: 35px;
+  }
+}
+
+
+
+.modalContentWrapper {
+  height: 100%;
+  padding-top: 50px;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}

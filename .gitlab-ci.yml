@@ -1,0 +1,25 @@
+# Node docker image on which our code would run
+image: ubuntu:20.04
+
+#This command is run before actual stages start running
+before_script:
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+
+stages:
+  # - test
+  - deploy
+
+# lint and test are two different jobs in the same stage.
+# This allows us to run these two in parallel and making build faster
+
+# Job 1:
+deployToAWS:
+  only:
+    - main
+  stage: deploy
+  script:
+    - chmod +x deploy/deploy.sh
+    - chmod +x deploy/disableHostKeyChecking.sh
+    - chmod +x deploy/updateAndRestart.sh
+    - chmod +x deploy/ensureDeps.sh
+    - bash deploy/deploy.sh

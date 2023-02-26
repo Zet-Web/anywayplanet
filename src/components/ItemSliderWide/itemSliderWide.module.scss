@@ -1,0 +1,38 @@
+@use 'styles' as*;
+
+.wrapper {
+  width: 734px;
+  height: 414px;
+  background: url('../../../public/assets/img/backgroundSlider.svg') no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-size: 100% 100%;
+
+}
+
+@media (max-width:768px) {
+  .wrapper {
+    width: 650px;
+    height: 380px;
+    background-size: 100% 100%;
+
+    >span {
+      max-width: 85% !important;
+    }
+  }
+}
+
+@media (max-width:425px) {
+  .wrapper {
+    width: 280px;
+    height: 175px;
+
+
+    >span {
+      max-width: 85% !important;
+    }
+  }
+}

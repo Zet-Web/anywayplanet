@@ -1,0 +1,184 @@
+@use 'styles' as*;
+
+
+.wrapper {
+  background: url('../../../public/assets/img/heroblockbg.png');
+  background-position: bottom center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+
+
+}
+
+.header {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  top: 0;
+  transition: all .3s ease-in;
+
+  &.fixed {
+    background-color: #000000;
+
+    [class*='header_wrapper'] {
+      padding-top: 3px;
+      padding-bottom: 3px;
+    }
+
+    [class*='burger_burger'] {
+      top: 37px;
+    }
+  }
+}
+
+.container {
+
+  position: relative;
+  max-width: 1470px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  min-height: 600px;
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  @include mobile-big-tablet {
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+    flex-direction: column;
+  }
+
+  @include mobile-tablet {
+    margin-top: 40px;
+  }
+}
+
+.box {
+  font-size: 48px;
+
+  @include mobile-laptop {
+    width: 46%;
+  }
+
+  @media (max-width: 1100px) {
+    width: 764px;
+    margin: 0 auto;
+  }
+
+  @include mobile-big-tablet {
+    width: 646px;
+    margin: 0 auto;
+  }
+
+  @include mobile-tablet {
+    width: 345px;
+  }
+
+  @include mobile {
+    font-size: 28px;
+    width: 269px;
+  }
+}
+
+.image {
+  width: 867px;
+  height: 659px;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+
+  @include mobile-laptop {
+    width: 655px;
+    height: 481px;
+    bottom: 16px;
+  }
+
+  @media (max-width: 1100px) {
+    order: 2;
+  }
+
+  @include mobile-big-tablet {
+    width: 477px;
+    height: 363px;
+    position: initial;
+    order: 2;
+  }
+
+  @include mobile-tablet {
+    width: 690px;
+    height: 522px;
+  }
+
+  @include mobile {
+    width: 477px;
+    height: 363px;
+  }
+}
+
+.text {
+  width: 560px;
+  margin-bottom: 40px;
+
+  @media (max-width: 1100px) {
+    width: 764px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 155px;
+
+    >div :first-child {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  @include mobile-big-tablet {
+    margin-bottom: 40px;
+    width: 662px;
+  }
+
+  @include mobile-tablet {
+    max-width: 350px;
+
+    >div :first-child {
+      font-size: 35px
+    }
+  }
+
+  @include mobile {
+    width: 269px;
+    margin-bottom: 24px;
+
+    >div :first-child {
+      font-size: 28px
+    }
+  }
+}
+
+.buttonWrapper {
+  @media (max-width: 1100px) {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @include mobile-big-tablet {
+    justify-content: center;
+  }
+}
+
+.playBtn {
+  font-size: 22px !important;
+  font-weight: $fw-bold  !important;
+}

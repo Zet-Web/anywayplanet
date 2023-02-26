@@ -1,0 +1,157 @@
+@use 'styles' as *;
+
+.mintingSection {
+  width: 954px;
+  background-color: $color-white-007;
+  border: 1px solid $color-white-15;
+  border-radius: 18px;
+  padding: 64px 104px 59px 106px;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+
+  @media (max-width: 984px) {
+    padding: 21px 16px;
+    width: fit-content;
+  }
+
+  @media (max-width: 536px) {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  & .stageWrapper {
+    &:not(:first-child) {
+      padding-top: 45px;
+
+      @media (max-width: 536px) {
+        padding-top: 24px;
+      }
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #444a53;
+    }
+
+    & .stageHeadingWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      color: $color-white;
+
+      @media (max-width: 536px) {
+        align-items: center;
+      }
+
+      & .stageHeading {
+        @include regularText;
+        font-weight: $fw-extrabold;
+        line-height: 1;
+
+        @media (max-width: 984px) {
+          font-size: 20px;
+        }
+      }
+
+      & .stageNumber {
+        opacity: 0.5;
+        @include titleExtraBoldTitleText;
+        line-height: 1;
+        @media (max-width: 984px) {
+          font-size: 32px;
+        }
+      }
+    }
+
+    & .tags {
+      padding-top: 25px;
+      padding-bottom: 47px;
+
+      @media (min-width: 1470px) {
+        justify-content: space-between;
+      }
+
+      @include mobile-tablet {
+        flex-direction: row;
+      }
+
+      @media (max-width: 536px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 14px;
+        padding-bottom: 24px;
+      }
+
+      & button {
+        height: 55px;
+        font-size: 22px;
+        border-radius: 12px;
+
+        @media (min-width: 1470px) {
+          width: 173px;
+        }
+
+        @media (max-width: 984px) {
+          height: 40px;
+          font-size: 16px;
+        }
+
+        @media (max-width: 536px) {
+          width: 160px;
+          &:not(:last-child) {
+            margin-right: 0;
+          }
+        }
+
+        @media (max-width: 425px) {
+          width: 124px;
+        }
+      }
+    }
+
+    & .fileChooserWrapper {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 24px;
+      padding-bottom: 8px;
+
+      &:last-child {
+        margin-right: -26px;
+
+        @media (max-width: 984px) {
+          margin-right: 0;
+        }
+        @media (max-width: 536px) {
+          padding-top: 15px;
+          justify-content: space-evenly;
+          padding-bottom: 33px;
+        }
+        @media (max-width: 330px) {
+          padding-top: 15px;
+          justify-content: space-between;
+          padding-bottom: 33px;
+        }
+      }
+    }
+  }
+
+  & .startMintingButtonWrapper {
+    text-align: center;
+    padding-top: 44px;
+
+    @media (max-width: 536px) {
+      padding-top: 24px;
+    }
+
+    & .startMintingButton {
+      @include regularText;
+
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+
+      @media (max-width: 536px) {
+        font-size: 15px;
+      }
+    }
+  }
+}

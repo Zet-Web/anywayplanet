@@ -1,0 +1,92 @@
+@use 'styles' as *;
+
+.menuContainer {
+  @include headMenuText;
+  color: $color-white;
+  text-transform: uppercase;
+  display: flex;
+
+  & .menuLink {
+    position: relative;
+    font-weight: $fw-extrabold;
+    color: transparent;
+    display: block;
+    padding: 10px 25px;
+
+    &:last-child {
+      padding: 10px 0 10px 25px;
+    }
+
+    &:first-child {
+      padding: 10px 25px 10px 0;
+    }
+
+    &:not(:hover, :focus, [data-active='true'])::before {
+      content: attr(data-value);
+      position: absolute;
+      left: 25px;
+      font-weight: $fw-regular;
+      color: $color-white;
+    }
+
+    &:first-child::before {
+      left: 0;
+    }
+
+    &:hover,
+    &:focus,
+    &[data-active='true'] {
+      color: $color-green-lime;
+      transition: color 0.3s ease;
+      font-weight: $fw-extrabold;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 124%;
+        left: 0;
+        width: 77%;
+        height: 18%;
+        box-shadow: 17px -45px 30px $color-green-lime;
+      }
+
+      &:first-child::after {
+        box-shadow: -2px -44px 30px $color-green-lime;
+      }
+
+      &:last-child::after {
+        box-shadow: 27px -47px 30px $color-green-lime;
+      }
+    }
+  }
+
+  & .menuLinkSeparator {
+    color: $color-green-lime;
+    opacity: 0.5;
+    padding: 10px 0;
+  }
+
+  @media (max-width: 1180px) {
+    font-size: 16px;
+
+    & .menuLink {
+      padding: 10px 10px;
+
+      &:last-child {
+        padding: 10px 0 10px 10px;
+      }
+
+      &:first-child {
+        padding: 10px 10px 10px 0;
+      }
+
+      &:not(:hover, :focus, [data-active='true'])::before {
+        left: 10px;
+      }
+    }
+  }
+
+  @include mobile-tablet {
+    display: none;
+  }
+}

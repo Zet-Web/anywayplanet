@@ -1,0 +1,67 @@
+@use 'styles' as *;
+
+.toggle {
+  width: 46px;
+  height: 18px;
+  margin-left: 32px;
+  color: $color-white;
+  position: relative;
+  cursor: pointer;
+
+  @include mobile-tablet {
+    margin-left: 0;
+  }
+}
+.toggle:after {
+  display: block;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 3px;
+  background-image: url('../../../../public/assets/icons/arrowDown.svg');
+  width: 14px;
+  height: 8px;
+  background-repeat: no-repeat;
+  transition: $transition;
+}
+.dropdown {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: none;
+  transition: $transition;
+}
+
+.active {
+  width: 46px;
+  height: 18px;
+  margin-top: 10px;
+  display: block;
+  background-color: $color-gainsborough;
+  transition: $transition;
+  cursor: pointer;
+}
+.ru {
+  padding: 12px 10px 10px 10px;
+
+  color: $color-black;
+  background-color: $color-gainsborough;
+  transition: $transition;
+
+  &:hover {
+    background-color: $color-crimson;
+    color: $color-white;
+  }
+}
+.en {
+  padding: 12px 10px 10px 10px;
+  text-align: center;
+  color: $color-black;
+  background-color: $color-gainsborough;
+  transition: $transition;
+
+  &:hover {
+    background-color: $color-crimson;
+    color: $color-white;
+  }
+}

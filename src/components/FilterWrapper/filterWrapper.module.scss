@@ -1,0 +1,71 @@
+@use 'styles' as *;
+
+.filterMenu {
+  max-width: 1470px;
+  margin: 0 auto;
+  padding: 15px 15px 32px;
+
+  & .tabsWrapper {
+    padding-bottom: 8px;
+  }
+
+  @include mobile-tablet {
+    display: none;
+  }
+}
+
+.filterMenuMobile {
+  display: none;
+  margin: 0 16px;
+  padding-bottom: 16px;
+
+  & .btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    @include menuText;
+    height: 52px;
+    position: relative;
+    cursor: pointer;
+    background: $color-white-007;
+    backdrop-filter: blur(40px);
+    border-radius: 12px;
+    border: 1px solid $color-white-01;
+    padding: 4px 16px 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+    }
+
+    &.filterBtn {
+      margin-bottom: 8px;
+      &::after {
+        content: '';
+        width: 64px;
+        height: 62px;
+        top: -7px;
+        right: -1px;
+        background-image: url('../../../public/assets/icons/filter.svg');
+      }
+    }
+
+    &.closeFilterBtn {
+    border-radius: 12px 12px 0 0;
+
+      &::after {
+        content: '';
+        width: 52px;
+        height: 52px;
+        top: -1px;
+        right: 4px;
+        background-image: url('../../../public/assets/icons/filter-close.svg');
+      }
+    }
+  }
+
+  @include mobile-tablet {
+    display: block;
+  }
+}

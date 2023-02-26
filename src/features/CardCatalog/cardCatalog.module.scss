@@ -1,0 +1,40 @@
+@use 'styles' as *;
+
+.container {
+  max-width: 1470px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.gridContainer {
+  display: grid;
+  width: 100%;
+  max-width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  row-gap: 14px;
+  justify-content: space-between;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 18px;
+  }
+
+  @media (min-width: 1100px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 24px;
+  }
+
+  @media (min-width: 1400px) {
+    grid-template-columns: 320px 320px 320px 320px;
+  }
+}
+.card {
+  width: 100%;
+  max-width: 290px;
+  height: 475px;
+  background: red;
+
+  @media (min-width: 992px) {
+    max-width: 320px;
+  }
+}

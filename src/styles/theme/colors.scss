@@ -1,0 +1,172 @@
+$container-width: 90%;
+$duration: 0.15s;
+$color-white: #fff;
+$color-black: #000;
+$color-white-20: #ffffff20;
+$color-gainsborough: #dedede;
+$color-crimson: #d8093a;
+
+$color-green-lime: #52ff00;
+$color-green-label: #46dc00;
+$color-green-mint: #50af95;
+$color-green-mint-light: #85FFD3;
+$color-green-mint-02: rgba(80, 175, 149, 0.2);
+$color-green-mint-03: rgba(80, 175, 149, 0.3);
+$color-green-mint-05: rgba(80, 175, 149, 0.5);
+$color-green-mint-08: rgba(80, 175, 149, 0.8);
+$color-green-meadow: #28c79b;
+$color-blue-black: #050a17;
+$color-blue-frosty: #00c2ff;
+$color-blue-frosty-08: rgba(0, 194, 255, 0.8);
+$color-blue-frosty-02: rgba(0, 194, 255, 0.2);
+$color-blue-frosty-05: rgba(0, 194, 255, 0.3);
+$color-blue-frosty-03: rgba(0, 194, 255, 0.5);
+$color-blue-2260: #2260ff;
+$color-dark-grey-blue: #252d37;
+$color-blue-2260-08: rgba(34, 96, 255, 0.8);
+$color-blue-2260-02: rgba(34, 96, 255, 0.2);
+$color-blue-2260-05: rgba(34, 96, 255, 0.5);
+$color-blue-2260-03: rgba(34, 96, 255, 0.3);
+$color-moderate-blue-01: rgba(102, 78, 249, 0.1);
+$color-yellow-e6: #ffe600;
+$color-yellow-e5: #ffe500;
+$color-yellow-e5-08: rgba(255, 229, 0, 0.8);
+$color-yellow-e5-05: rgba(255, 229, 0, 0.5);
+$color-yellow-e5-03: rgba(255, 229, 0, 0.3);
+$color-yellow-e5-02: rgba(255, 229, 0, 0.2);
+$color-aniline-purple: #ff008a;
+$color-red-3d: #ff3d00;
+$color-light-birch: #41d0da;
+$color-granite-gray: #2d323d;
+$color-granite-gray-light: #363d47;
+$color-slate-gray: #3a3f4a;
+$color-border-gray: #444a53;
+$color-mobile-border-gray: #323a46;
+$color-black-gray: #23252a;
+
+$color-layout-light-blue: rgba(0, 60, 118, 0.15);
+$color-layout-light-blue-2: rgba(0, 60, 118, 0.25);
+
+$color-black-03: rgba(0, 0, 0, 0.3);
+$color-black-025: rgba(0, 0, 0, 0.25);
+
+$color-white-08: rgba(255, 255, 255, 0.8);
+$color-white-06: rgba(255, 255, 255, 0.6);
+$color-white-05: rgba(255, 255, 255, 0.5);
+$color-white-007: rgba(255, 255, 255, 0.07);
+$color-white-025: rgba(255, 255, 255, 0.25);
+$color-white-02: rgba(255, 255, 255, 0.2);
+$color-white-015: rgba(255, 255, 255, 0.15);
+$color-white-01: rgba(255, 255, 255, 0.1);
+$color-white-15: rgba(255, 255, 255, 0.15);
+$color-white-18: rgba(255, 255, 255, 0.18);
+$color-white-007: rgba(255, 255, 255, 0.07);
+$color-white-007-no-opacity: #252a;
+$color-white-005: rgba(255, 255, 255, 0.05);
+$color-white-003: rgba(255, 255, 255, 0.03);
+
+$color-green-015: rgba(82, 255, 0, 0.15);
+$color-green-08: rgba(82, 255, 0, 0.8);
+$color-green-05: rgba(82, 255, 0, 0.5);
+$color-green-02: rgba(82, 255, 0, 0.2);
+$color-green-06: rgba(82, 255, 0, 0.6);
+
+$color-blue-06: rgba(21, 176, 242, 0.6);
+
+$color-red-06: rgba(255, 0, 0, 0.6);
+
+$color-bg: #12141a;
+$color-bg-menu: #030f20;
+$color-input-label-bg: #3c444e;
+$color-bg-form: #1e222d;
+
+$text-gradient-116deg: linear-gradient(
+  116.57deg,
+  #ffffff 52.36%,
+  #52ff00 94.58%
+);
+$text-gradient-243deg: linear-gradient(
+  243.73deg,
+  #ffffff 57.13%,
+  #52ff00 123.46%
+);
+$text-gradient-304deg: linear-gradient(
+  304.88deg,
+  #ffffff 69.44%,
+  #52ff00 106.92%
+);
+$text-gradient-353deg: linear-gradient(
+  353.73deg,
+  #ffffff 66.13%,
+  #52ff00 99.46%
+);
+$text-gradient-116deg: linear-gradient(
+  116.57deg,
+  #ffffff 52.36%,
+  #52ff00 94.58%
+);
+$text-gradient-243deg: linear-gradient(
+  243.73deg,
+  #ffffff 57.13%,
+  #52ff00 123.46%
+);
+$text-gradient-304deg: linear-gradient(
+  304.88deg,
+  #ffffff 69.44%,
+  #52ff00 106.92%
+);
+$text-gradient-353deg: linear-gradient(
+  353.73deg,
+  #ffffff 66.13%,
+  #52ff00 99.46%
+);
+$text-gradient-298deg: linear-gradient(
+  298.73deg,
+  #ffffff 61.13%,
+  #52ff00 109.46%
+);
+$text-gradient-116deg: linear-gradient(
+  116.57deg,
+  #ffffff 52.36%,
+  #52ff00 94.58%
+);
+$text-gradient-243deg: linear-gradient(
+  243.73deg,
+  #ffffff 57.13%,
+  #52ff00 123.46%
+);
+$text-gradient-304deg: linear-gradient(
+  304.88deg,
+  #ffffff 69.44%,
+  #52ff00 106.92%
+);
+$text-gradient-353deg: linear-gradient(
+  353.73deg,
+  #ffffff 66.13%,
+  #52ff00 99.46%
+);
+$text-gradient-116deg: linear-gradient(
+  116.57deg,
+  #ffffff 52.36%,
+  #52ff00 94.58%
+);
+$text-gradient-243deg: linear-gradient(
+  243.73deg,
+  #ffffff 57.13%,
+  #52ff00 123.46%
+);
+$text-gradient-304deg: linear-gradient(
+  304.88deg,
+  #ffffff 69.44%,
+  #52ff00 106.92%
+);
+$text-gradient-353deg: linear-gradient(
+  353.73deg,
+  #ffffff 66.13%,
+  #52ff00 99.46%
+);
+$text-gradient-298deg: linear-gradient(
+  298.73deg,
+  #ffffff 61.13%,
+  #52ff00 109.46%
+);

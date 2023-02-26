@@ -1,0 +1,26 @@
+@use 'styles' as *;
+
+.menu {
+  width: 138px;
+  margin-left: 28px;
+  margin-right: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btn {
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $color-green-02;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: $transition;
+  &:hover {
+    background: $color-green-06;
+    border: 2px solid $color-green-lime;
+    transition: $transition;
+  }
+}

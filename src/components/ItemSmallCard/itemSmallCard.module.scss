@@ -1,0 +1,205 @@
+@use 'styles' as *;
+
+.itemCard {
+  border-radius: 18px;
+  width: 280px;
+  height: 416px;
+  margin: 0 auto;
+  backdrop-filter: blur(40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 15px;
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+}
+
+.cardTop {
+  width: 210px;
+  height: 233px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.hash {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 7px;
+  width: 65px;
+  height: 16px;
+  position: absolute;
+  top: 7px;
+  right: 6px;
+  font-size: 10px;
+  font-weight: $fw-regular;
+  line-height: 1.1;
+  border-radius: 6px;
+}
+
+.quality {
+  padding: 6px 16px 4px 16px;
+  position: absolute;
+  border-radius: 6px;
+  text-transform: uppercase;
+  left: 5px;
+  bottom: 5px;
+  font-family: $neuePlain;
+  font-weight: $fw-regular;
+  letter-spacing: 0.1em;
+}
+
+.epic {
+  background-color: $color-yellow-e5;
+  & {
+    color: $color-blue-black;
+  }
+}
+.legend {
+  background-color: $color-aniline-purple;
+  & {
+    color: $color-white;
+  }
+}
+
+.rare {
+  background-color: $color-blue-frosty;
+  & {
+    color: $color-white;
+  }
+}
+.infoBlock {
+  width: 210px;
+  height: 112px;
+  background-color: $color-granite-gray;
+  border-radius: 9px;
+}
+.cardBottom {
+  padding: 10px 13px;
+  border-bottom: 1px solid $color-slate-gray;
+  overflow: hidden;
+  font-weight: $fw-regular;
+}
+
+.cardProgress {
+  height: 5px;
+  background-color: $color-slate-gray;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progressLine {
+  height: 100%;
+  width: 60%;
+  background-color: $color-yellow-e6;
+  border-radius: 10px;
+}
+
+.epic {
+  background-color: $color-yellow-e5;
+}
+.legend {
+  background-color: $color-aniline-purple;
+}
+
+.rare {
+  background-color: $color-blue-frosty;
+}
+
+.nftText {
+  margin-top: 11px;
+  font-weight: 100;
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+.price {
+  margin-top: 6px;
+  text-align: left;
+  color: $color-white;
+}
+
+.priceNum {
+  display: inline-block;
+  text-align: left;
+  font-size: 19px;
+  font-weight: $fw-regular;
+}
+.gameCurrency {
+  font-weight: 100;
+  font-size: 11px;
+  line-height: 120%;
+}
+
+.levelBlock {
+  padding-left: 13px;
+  padding-right: 11px;
+  padding-top: 6px;
+  text-align: left;
+  font-size: 9px;
+  border-right: 1px solid $color-slate-gray;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.level {
+  font-weight: 100;
+  font-size: 8px;
+  line-height: 120%;
+  letter-spacing: 0.4px;
+}
+.levelProductivity {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.levelNum {
+  color: $color-white;
+  font-size: 11px;
+  font-weight: 100;
+
+  line-height: 120%;
+}
+
+.productivity {
+  width: 150px;
+  padding-top: 7px;
+  padding-left: 13px;
+  font-size: 9px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  text-align: left;
+}
+.productivityTitle {
+  font-weight: 100;
+  font-size: 8px;
+  line-height: 120%;
+  letter-spacing: 0.3px;
+}
+.productivityNum {
+  font-size: 11px;
+  line-height: 120%;
+  font-weight: $fw-regular;
+  color: $color-white;
+}
+
+.epicText {
+  color: $color-yellow-e6;
+}
+
+.legendText {
+  color: $color-aniline-purple;
+}
+
+.rareText {
+  color: $color-blue-frosty;
+}

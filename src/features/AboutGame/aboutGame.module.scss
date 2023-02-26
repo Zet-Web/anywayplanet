@@ -1,0 +1,291 @@
+@use 'styles' as *;
+
+.wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 122px 15px 86px 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.logoContainer {
+  font-family: $neuePlain;
+  line-height: 130%;
+  font-weight: $fw-extrabold;
+  font-size: 80px;
+  color: $color-white;
+  background-image: url('../../../public/assets/img/greenLine_h1.svg');
+  background-repeat: no-repeat;
+  background-position: bottom left -15px;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.imgPlanet {
+  width: 661px;
+  height: 790px;
+  position: absolute;
+  background-image: url('../../../public/assets/img/aboutGamePlanet.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: 0;
+}
+
+.outline {
+  height: 2px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.25);
+  position: absolute;
+}
+
+.firstClass {
+  top: 0;
+  max-width: 526px;
+  width: 100%;
+  position: absolute;
+  height: 11px;
+  padding: 6px;
+  overflow-y: hidden;
+  right: 50%;
+  transform: rotate(180deg) translateX(-50%);
+  border-radius: 13px 13px 0 0;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-bottom: none;
+  background-color: black;
+  z-index: 100;
+}
+
+.lastClass {
+  height: 10px;
+  background-color: $color-green-lime;
+  border-radius: 5px;
+}
+
+.logoSection {
+  padding: 80px 0 0 0;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.sliderWrapper {
+  max-width: 1490px;
+  margin: auto;
+  margin-bottom: 57px;
+
+  @media (max-width: 1440px) {
+    max-width: 780px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    overflow: hidden;
+
+    [class*='swiper'] {
+      overflow: visible;
+    }
+
+    [class*='nextElWrapper'] {
+      display: none;
+    }
+  }
+
+  @media (max-width: 425px) {
+    max-width: 100%;
+    overflow: hidden;
+
+    [class*='swiper'] {
+      overflow: visible;
+    }
+
+    [class*='nextElWrapper'] {
+      display: none;
+    }
+  }
+
+  [class='Slider_slider'] {
+    padding-right: 40px;
+
+    @include mobile {
+      padding-right: 0;
+    }
+  }
+
+  [class*='swiper-initialized'] {
+    padding-right: 50px;
+
+    @include tablet {
+      padding-left: 10px;
+    }
+  }
+}
+
+.descriptionText {
+  font-family: $neuePlain;
+  font-size: 24px;
+  line-height: 31px;
+  background: $text-gradient-353deg;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: auto;
+  max-width: 1440px;
+
+  > p {
+    max-width: 735px;
+  }
+}
+
+@include mobile-laptop {
+  .container {
+    padding: 122px 15px 86px 15px;
+  }
+
+  .logoContainer {
+    background-position: bottom;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .logoSection {
+    padding-left: 90px;
+  }
+
+  .descriptionText {
+    > p {
+      padding-left: 90px;
+    }
+  }
+}
+
+@include mobile-big-tablet {
+  .container {
+    padding: 122px 15px 86px 15px;
+  }
+
+  .logoContainer {
+    @include gameMenuText;
+    font-size: 60px;
+    line-height: 80px;
+    font-weight: $fw-extrabold;
+    background-size: 100%;
+    background-position: bottom center;
+    max-width: 452px;
+  }
+
+  .imgPlanet {
+    width: 550px;
+  }
+
+  .outline {
+    z-index: 1;
+  }
+
+  .firstClass {
+    max-width: 350px;
+    z-index: 5;
+  }
+
+  .lastClass {
+    height: 10px;
+    border-radius: 5px;
+  }
+
+  .logoSection {
+    padding: 38px 0 0 0;
+    max-width: 425px;
+  }
+
+  .sliderWrapper {
+    margin-bottom: 24px;
+  }
+
+  .descriptionText {
+    > p {
+      max-width: 630px;
+    }
+  }
+}
+
+@include mobile-tablet {
+  .container {
+    padding: 56px 0 51px 0;
+  }
+
+  .logoContainer {
+    @include gameMenuText;
+    font-size: 42px;
+    line-height: 60px;
+    font-weight: $fw-extrabold;
+    background-size: 100%;
+    background-position: bottom center;
+    max-width: 345px;
+  }
+
+  .imgPlanet {
+    top: -300px;
+    width: 280px;
+    z-index: 1;
+    background-image: url('../../../public/assets/img/aboutGamePlanetLitle.png');
+  }
+
+  .logoSection {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .descriptionText {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 0;
+
+    > p {
+      max-width: 630px;
+      padding-left: 20px;
+    }
+  }
+}
+
+@include mobile {
+  .logoContainer {
+    @include gameMenuText;
+    font-weight: $fw-extrabold;
+    background-size: 100%;
+    background-position: bottom left;
+    max-width: 205px;
+  }
+
+  .imgPlanet {
+    top: -159px;
+    width: 157px;
+    z-index: 1;
+  }
+
+  .firstClass {
+    max-width: 230px;
+  }
+
+  .lastClass {
+    height: 10px;
+    border-radius: 5px;
+  }
+
+  .logoSection {
+    padding: 38px 0 0 0;
+  }
+
+  .sliderWrapper {
+    margin-bottom: 24px;
+  }
+
+  .descriptionText {
+    font-size: 15px;
+    line-height: 19px;
+
+    > p {
+      max-width: 315px;
+    }
+  }
+}
